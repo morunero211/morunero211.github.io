@@ -79,6 +79,19 @@
     '</aside>'
   ].join('\n');
 
+  /* ── 플로팅 퀵메뉴 HTML ────────────────────────── */
+  var FLOATING_MENU = [
+    '<div class="floating-quick-menu">',
+    '  <ul class="quick-menu-items">',
+    '    <li><a href="#top" class="quick-menu-btn" title="맨 위로"><i class="fas fa-arrow-up"></i><span>위로</span></a></li>',
+    '    <li><a href="project.html" class="quick-menu-btn" title="사업분야"><i class="fas fa-briefcase"></i><span>사업</span></a></li>',
+    '    <li><a href="contact.html" class="quick-menu-btn" title="오시는길"><i class="fas fa-map-marker-alt"></i><span>위치</span></a></li>',
+    '    <li><a href="tel:052-249-9199" class="quick-menu-btn" title="전화하기"><i class="fas fa-phone"></i><span>전화</span></a></li>',
+    '    <li><a href="mailto:joy052@hanmail.net" class="quick-menu-btn" title="문의하기"><i class="fas fa-envelope"></i><span>문의</span></a></li>',
+    '  </ul>',
+    '</div>'
+  ].join('\n');
+
   /* ── 푸터 HTML ──────────────────────────────── */
   var FOOTER = [
     '<footer class="agency-footer">',
@@ -144,6 +157,11 @@
     // 4. footer 주입
     var f = document.getElementById('footer-placeholder');
     if (f) f.outerHTML = FOOTER;
+    
+    // 5. 플로팅 퀵메뉴 주입 (body에 직접 추가)
+    var floatingMenuDiv = document.createElement('div');
+    floatingMenuDiv.innerHTML = FLOATING_MENU;
+    document.body.appendChild(floatingMenuDiv.firstChild);
   }
 
   /* ── 스크롤 투 탑 ───────────────────────────── */
