@@ -1,8 +1,23 @@
-/* 조이산업 - home 페이지 스타일 */
+/**
+ * ========================================================
+ * 🏠 home.css - 홈/랜딩 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - Hero Section: 상단 대형 배너 (제목, 설명, CTA 버튼)
+ *   - Quicklinks Section: 주요 메뉴 4개 카드 (사업분야/실적현황/오시는길/고객문의)
+ *   - 반응형 레이아웃: 모바일/태블릿/데스크톱 대응
+ * 내용:
+ *   - .hero: 배경 이미지 + 오버레이 + 텍스트
+ *   - .quicklinks-section: 4개 네비게이션 카드 그리드
+ *   - .qlink-card: 개별 카드 스타일 + 호버 효과
+ *   - .qlink-icon: 원형 아이콘 배지 (Font Awesome)
+ *   - 미디어쿼리: 768px/480px 반응형 처리
+ * 사용 대상: index.html / home.html
+ * ======================================================== */
 
 /* ===== Hero ===== */
 .hero {
-  position: relative; min-height: 100vh; display: flex; align-items: center;
+  position: relative; min-height: 35vh; display: flex; align-items: center;
   background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663595000619/3pkdaD5eA6m8REBWdQEDWJ/hero-petrochemical-PUpZwE7ek6mN9inwZYL6DU.webp');
   background-size: cover; background-position: center; background-repeat: no-repeat;
 }
@@ -32,35 +47,36 @@
 }
 .btn-hero:hover { background: #138fa3; transform: translateY(-2px); color: #fff !important; }
 
-/* ===== Features ===== */
-.features-section { background: #fff; padding: 80px 0; }
-.features-header { text-align: center; margin-bottom: 52px; }
-.features-header h2 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 700;
-  color: #1e2d3d; margin-bottom: 14px;
+/* ===== Quick-links Navigation Section ===== */
+.quicklinks-section { background: #f4f7fa; padding: 80px 0; }
+.quicklinks-header { text-align: center; margin-bottom: 48px; }
+.quicklinks-header h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  font-weight: 700; color: #1e2d3d; margin-bottom: 14px;
 }
-.features-header p { color: #666; font-size: 15px; line-height: 1.8; max-width: 660px; margin: 0 auto; }
-.features-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;
+.quicklinks-header p { color: #666; font-size: 15px; line-height: 1.8; max-width: 620px; margin: 0 auto; }
+.quicklinks-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
 }
-.feature-card {
-  border: 1px solid #e8ecf0; border-radius: 8px; padding: 36px 28px;
-  text-align: center; background: #fff; transition: box-shadow 0.25s, transform 0.25s;
-  opacity: 0; transform: translateY(30px);
+.qlink-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  background: #fff; border-radius: 10px; padding: 36px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  color: #333 !important; text-decoration: none;
+  transition: transform 0.22s, box-shadow 0.22s;
 }
-.feature-card.visible { animation: fadeInUp 0.55s ease forwards; }
-.feature-card:nth-child(2).visible { animation-delay: 0.1s; }
-.feature-card:nth-child(3).visible { animation-delay: 0.2s; }
-.feature-card:nth-child(4).visible { animation-delay: 0.3s; }
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-.feature-card:hover { box-shadow: 0 8px 28px rgba(58,87,126,0.13); transform: translateY(-4px); }
-.feature-icon { margin-bottom: 20px; display: flex; justify-content: center; }
-.feature-card h3 {
-  font-family: 'Noto Serif KR', serif; font-size: 1.05rem;
-  font-weight: 700; color: #1e2d3d; margin-bottom: 12px;
+.qlink-card:hover {
+  transform: translateY(-6px); box-shadow: 0 10px 30px rgba(58,87,126,0.15);
+  color: #333 !important;
 }
-.feature-card p { color: #666; font-size: 0.88rem; line-height: 1.75; }
+.qlink-icon {
+  width: 68px; height: 68px; border-radius: 50%;
+  background: var(--color-point1); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.qlink-icon i { font-size: 1.8rem; color: #fff; }
+.qlink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
+.qlink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
 
 /* ===== CTA Band ===== */
 .cta-band {
@@ -98,5 +114,5 @@
   border-color: var(--color-point1); box-shadow: 0 2px 8px rgba(58,87,126,0.15);
 }
 
-@media (max-width: 768px) { .features-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .quicklinks-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .quicklinks-grid { grid-template-columns: 1fr; } }

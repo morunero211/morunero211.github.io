@@ -1,4 +1,22 @@
-/* 조이산업 - performance 페이지 스타일 */
+/**
+ * ========================================================
+ * 📈 performance.css - 실적현황 상세 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - 성과 데이터 표시: 테이블/차트 레이아웃
+ *   - 페이지 히어로: 상단 헤더 (배경 워터마크)
+ *   - 컬러 팔레트: 페이지별 전용 색상 정의
+ *   - 테이블 스타일: 데이터 표 포맷팅
+ * 내용:
+ *   - :root 변수 확장 (light-bg, table-header, border, text 색상)
+ *   - body: 고정 네비바 패딩 재정의
+ *   - .page-hero: 상단 배너 섹션
+ *   - .page-hero-bg-text: 워터마크 텍스트
+ *   - .page-hero-content: 헤더 텍스트 영역
+ *   - .page-hero h1: 페이지 제목
+ *   - 테이블 및 데이터 그리드 스타일
+ * 사용 대상: pages/performance.html
+ * ======================================================== */
 
 :root {
       --color-light-bg: #f0f2f5;
@@ -7,7 +25,6 @@
       --color-text: #333;
       --color-text-light: #666;
     }
-    body { padding-top: var(--navbar-height); }
     .page-hero {
       position: relative; background-color: var(--color-light-bg);
       padding: 30px 0 20px; overflow: hidden; min-height: 100px;

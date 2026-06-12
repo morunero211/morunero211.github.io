@@ -105,7 +105,7 @@
         return;
       }
       var dl = e.target.closest('.dropdown-toggle');
-      if (dl && window.innerWidth <= 992) {
+      if (dl && window.innerWidth <= 1200) {
         e.preventDefault();
         var id = dl.getAttribute('data-target');
         var item = document.getElementById(id);

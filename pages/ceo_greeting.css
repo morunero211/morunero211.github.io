@@ -1,6 +1,21 @@
-/* 조이산업 - ceo_greeting 페이지 스타일 */
+/**
+ * ========================================================
+ * 👔 ceo_greeting.css - CEO 인사말 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - CEO 인사말 섹션: 텍스트 + 이미지 레이아웃
+ *   - 2단 구성: 왼쪽 이미지 / 오른쪽 텍스트
+ *   - 모바일 반응형: 1단으로 변환
+ * 내용:
+ *   - .index-devices: 메인 컨테이너 (흰색 배경)
+ *   - .devices: 이미지 스타일 (45% 너비, 둥근 모서리)
+ *   - h4 / p: CEO 인사말 텍스트 스타일
+ *   - @media (max-width: 768px): 모바일에서 세로 레이아웃
+ * 사용 대상: pages/ceo_greeting.html
+ * ======================================================== */
 
 .index-devices { background: #fff; padding: 40px 0; }
+
 .index-devices section {
   display: flex; flex-wrap: wrap; gap: 30px;
   max-width: 1140px; margin: 0 auto; padding: 0 15px;

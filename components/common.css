@@ -1,7 +1,22 @@
-/* ==============================================
-   조이산업 - 공통 스타일
-   Navbar / Footer / Base — 모든 페이지에서 공유
-   ============================================== */
+/**
+ * ========================================================
+ * 📋 common.css - 모든 페이지에서 공유하는 공통 스타일
+ * ========================================================
+ * 역할:
+ *   - Navbar: 고정 위치 네비게이션 바 (모든 페이지 상단)
+ *   - Footer: 페이지 하단 푸터 (공통 레이아웃)
+ *   - Base Typography: 전사 한글 폰트 (Noto Sans KR + Dotum)
+ *   - CSS Variables: 색상 팔레트 & 레이아웃 상수
+ *   - Global Utilities: 스크롤 동작, 박스 모델, 링크 스타일 등
+ * 내용:
+ *   - :root 변수 정의 (색상, 높이 등)
+ *   - body 기본 스타일 (폰트, 패딩, 배경)
+ *   - Navbar 고정 레이아웃 & 드롭다운 메뉴
+ *   - Footer 스타일 & SNS 링크
+ *   - Scroll-to-Top 버튼
+ *   - 반응형 미디어쿼리
+ * 사용 대상: 모든 HTML 페이지 (필수)
+ * ======================================================== */
 
 :root {
   --color-point1: #3A577E;
@@ -15,11 +30,12 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', Dotum, sans-serif;
   font-size: 14px;
   color: #333;
   line-height: 1.6;
   background: #fff;
+  padding-top: var(--navbar-height);
 }
 
 a { color: var(--color-point1); text-decoration: none; }
@@ -34,39 +50,76 @@ a:hover { color: gray; }
   background-color: var(--color-dark);
   height: var(--navbar-height);
   display: flex; align-items: center; padding: 0 1rem;
-}
+  overflow: visible;  width: 100%;}
 .navbar-container {
-  width: 100%; max-width: 1140px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
+  width: 100% !important; max-width: 1140px !important; margin: 0 auto !important;
+  display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: nowrap !important;
+  padding: 0 !important;
+  position: relative;
+  z-index: 1031;
 }
-.navbar-brand {
+.navbar-brand { /* 로고 + 브랜드명 */
   display: flex; align-items: center; gap: 8px;
   color: #fff !important; font-size: 1.1rem; font-weight: 500; text-decoration: none;
+  flex-shrink: 0;
 }
-.navbar-brand .brand-logo {
+.navbar-brand .brand-logo { /* 로고 아이콘 스타일 */
   width: 40px; height: 40px;
   border: 2px solid rgba(255,255,255,0.85); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.72rem; font-weight: 700; color: #fff;
   letter-spacing: 0; line-height: 1; flex-shrink: 0;
 }
-.navbar-nav { display: flex; align-items: center; list-style: none; gap: 0; }
-.nav-item { position: relative; }
-.nav-link {
+/* Desktop 네비게이션 (1200px 이상) */
+.navbar-collapse {
+  position: static !important;
+  display: flex !important;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.navbar-nav {
+  display: flex; flex-direction: row; align-items: center;
+  list-style: none; gap: 10px; margin: 0 !important; padding: 0 !important;
+}
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: var(--navbar-height);
+  z-index: 1032;
+}
+.nav-link { /* 네비게이션 링크 스타일 */
   color: rgba(255,255,255,0.85) !important;
-  padding: 0.5rem 1rem; font-size: 0.95rem;
-  display: flex; align-items: center; gap: 4px;
-  transition: color 0.2s; white-space: nowrap;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+  white-space: nowrap;
+  block-size: auto;
 }
 .nav-link:hover,
 .nav-link.active { color: var(--color-cyan) !important; }
 .nav-link .caret { font-size: 0.7rem; margin-left: 2px; }
-.dropdown-menu {
-  display: none; position: absolute; top: 100%; left: 0;
-  background-color: #2c3e50; min-width: 150px;
-  border: none; border-radius: 0; padding: 0.5rem 0; z-index: 1000;
+.dropdown-menu { /* 드롭다운 메뉴 스타일 */
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: auto !important;
+  background-color: #2c3e50 !important;
+  min-width: 180px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 0 !important; 
+  z-index: 10001 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25) !important;
+  margin: 0 !important;
+  pointer-events: auto !important;
+  white-space: nowrap;
 }
-.nav-item:hover .dropdown-menu { display: block; }
+.nav-item:hover .dropdown-menu { display: block !important; }
 .dropdown-item {
   display: block; padding: 0.4rem 1rem;
   color: rgba(255,255,255,0.8); font-size: 0.9rem;
@@ -96,7 +149,7 @@ a:hover { color: gray; }
 }
 .agency-footer .go-top i { display: block; font-size: 16px; }
 .agency-footer .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-.agency-footer .footer-row { display: flex; flex-wrap: wrap; gap: 20px; }
+.agency-footer .footer-row { display: flex; flex-wrap: wrap; gap: 20px; } 
 .agency-footer .footer-col { flex: 1; min-width: 200px; }
 .agency-footer h4 {
   color: #fff; text-transform: uppercase; font-weight: 400; letter-spacing: 3px;
@@ -118,21 +171,32 @@ a:hover { color: gray; }
 .scrollup:hover { opacity: 0.85; }
 
 /* ===== Responsive ===== */
-@media (max-width: 992px) {
-  .navbar-toggler { display: block; }
+@media (max-width: 1200px) {
+  .navbar-toggler { display: block !important; }
+  /* 모바일/태블릿에서 네비게이션 숨김 */
   .navbar-collapse {
-    display: none; position: absolute;
-    top: var(--navbar-height); left: 0; right: 0;
-    background-color: var(--color-dark); padding: 0.5rem 0;
+    display: none !important;
+    position: absolute !important;
+    top: var(--navbar-height) !important; left: 0 !important; right: 0 !important;
+    background-color: var(--color-dark) !important; padding: 0.5rem 0 !important;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
-  .navbar-collapse.open { display: block; }
-  .navbar-nav { flex-direction: column; align-items: flex-start; padding: 0 1rem; }
+  .navbar-collapse.open { display: block !important; }
+  .navbar-nav { flex-direction: column !important; align-items: stretch !important; padding: 0 !important; gap: 0 !important; }
+  .nav-item { display: block; }
+  .nav-link { padding: 0.7rem 1rem !important; }
+  /* 모바일 드롭다운 메뉴: position static으로 변경 (아래로 펼침) */
   .dropdown-menu {
-    position: static;
-    background-color: rgba(255,255,255,0.05); padding-left: 1rem;
+    position: static !important;
+    display: none;
+    background-color: rgba(255,255,255,0.05);
+    padding-left: 1rem !important;
+    box-shadow: none;
+    min-width: auto;
   }
-  .nav-item:hover .dropdown-menu { display: none; }
-  .nav-item.open .dropdown-menu { display: block; }
+  .nav-item:hover .dropdown-menu { display: none !important; }
+  .nav-item.open .dropdown-menu { display: block !important; }
 }
 @media (max-width: 768px) {
   .agency-footer .footer-row { flex-direction: column; }
@@ -142,11 +206,6 @@ a:hover { color: gray; }
    공통 페이지 레이아웃 스타일 (모든 내부 페이지)
    ============================================== */
 
-/* 페이지 기본 */
-body {
-  padding-top: var(--navbar-height);
-  font-family: Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;
-}
 a { color: var(--color-point1); }
 
 /* 페이지 상단 타이틀 배너 (.index-video-intro) */
