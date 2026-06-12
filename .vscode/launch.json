@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "type": "chrome", "request": "launch", "name": "홈 (home.html)", "file": "${workspaceFolder}/home.html" },
+    { "type": "chrome", "request": "launch", "name": "대표자 인사말 (ceo_greeting.html)", "file": "${workspaceFolder}/ceo_greeting.html" },
+    { "type": "chrome", "request": "launch", "name": "회사연혁 (history.html)", "file": "${workspaceFolder}/history.html" },
+    { "type": "chrome", "request": "launch", "name": "조직도 (org_chart.html)", "file": "${workspaceFolder}/org_chart.html" },
+    { "type": "chrome", "request": "launch", "name": "인허가현황 (certification.html)", "file": "${workspaceFolder}/certification.html" },
+    { "type": "chrome", "request": "launch", "name": "사업분야 (project.html)", "file": "${workspaceFolder}/project.html" },
+    { "type": "chrome", "request": "launch", "name": "실적현황 (records.html)", "file": "${workspaceFolder}/records.html" },
+    { "type": "chrome", "request": "launch", "name": "실적현황 구버전 (performance.html)", "file": "${workspaceFolder}/performance.html" },
+    { "type": "chrome", "request": "launch", "name": "오시는길 (contact.html)", "file": "${workspaceFolder}/contact.html" },
+    { "type": "chrome", "request": "launch", "name": "고객문의 (board.html)", "file": "${workspaceFolder}/board.html" }
+  ]
+}
