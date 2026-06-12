@@ -20,44 +20,39 @@
  * 사용 대상: pages/org_chart.html
  * ======================================================== */
 
-/* ===== CSS 조직도 트리 ===== */
-.org-wrap {
-  padding: 40px 0 80px;
-  overflow-x: auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 500px;
+.page-hero {
+  position: relative; background-color: #f0f2f5;
+  padding: 60px 0 20px; overflow: hidden; min-height: 150px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.org-tree,
-.org-tree ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: none; /* 숨김 */
+.page-hero-bg-text {
+  position: absolute; top: 30px; left: 100px; font-size: 7rem; font-weight: 900;
+  color: rgba(0,0,0,0.04); letter-spacing: 2px; user-select: none;
+  line-height: 1; font-style: italic;
 }
 
 /* ===== 조직도 이미지 영역 ===== */
 .org-image-container {
-  width: 100%;
-  max-width: 900px;
+  width: 200%;
+  max-width: 1200px;
   background: #f5f5f5;
   border: 2px dashed #ccc;
   border-radius: 8px;
-  padding: 40px 20px;
+  padding: 60px 15px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
   min-height: 500px;
+  overflow: visible;
+
 }
 
 .org-image-container img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: auto !important;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -66,62 +61,6 @@
   color: #999;
   font-size: 14px;
   margin-top: 20px;
+ 
 }
 
-.org-tree li {
-  display: none; /* 숨김 */
-}
-
-/* 연결선: 공통 - 모두 숨김 */
-.org-tree li::before,
-.org-tree li::after {
-  display: none;
-}
-
-/* 외동 자식: 연결선 제거 - 불필요 */
-.org-tree li:only-child::after,
-.org-tree li:only-child::before {
-  display: none; 
-}
-.org-tree li:only-child { 
-  display: none;
-}
-
-/* 첫/마지막 자식 처리 - 불필요 */
-.org-tree li:first-child::before,
-.org-tree li:last-child::after {
-  display: none;
-}
-.org-tree li:last-child::before {
-  display: none;
-}
-.org-tree li:first-child::after {
-  display: none;
-}
-
-/* 부모 → 자식 그룹 세로선 - 불필요 */
-.org-tree ul ul::before {
-  display: none;
-}
-
-/* 노드 박스 - 모두 숨김 */
-.org-node {
-  display: none;
-}
-
-/* 노드 색상 별 스타일 - 모두 숨김 */
-.org-node.root-node {
-  display: none;
-}
-
-.org-node.dept-node {
-  display: none;
-}
-
-.org-node.team-node {
-  display: none;
-}
-
-.org-node.sub-node {
-  display: none;
-}

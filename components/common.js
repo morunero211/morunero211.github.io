@@ -37,7 +37,7 @@ var NAV = `
           <a class="nav-link" href="/pages/project.html">사업영역</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/records.html">실적/성과</a>
+          <a class="nav-link" href="/pages/records.html">실적현황</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/board.html">커뮤니티</a>
