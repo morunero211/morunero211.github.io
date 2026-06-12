@@ -123,6 +123,7 @@
 }
 .hexagon-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 50px; justify-items: center;
+  width: 100%; margin: 0 auto;
 }
 .hexagon-card {
   width: 100%; max-width: 350px; height: 350px; display: flex; align-items: center; justify-content: center;
