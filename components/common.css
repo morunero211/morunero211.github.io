@@ -19,9 +19,9 @@
  * ======================================================== */
 
 :root {
-  --color-point1: #3A577E;
-  --color-cyan:   #17a2b8;
-  --color-dark:   #1e2a3a;
+  --color-point1: #4caf50;
+  --color-cyan:   #66bb6a;
+  --color-dark:   #1b5e20;
   --navbar-height: 56px;
 }
 
@@ -198,7 +198,140 @@ a:hover { color: gray; }
   .nav-item:hover .dropdown-menu { display: none !important; }
   .nav-item.open .dropdown-menu { display: block !important; }
 }
+
+/* ===== Sidebar Layout ===== */
+.page-wrapper {
+  display: flex;
+  gap: 0;
+  padding-top: var(--navbar-height);
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #e0e0e0;
+  position: fixed;
+  left: 0;
+  top: calc(var(--navbar-height) + 120px);
+  height: calc(100vh - var(--navbar-height) - 120px);
+  overflow-y: auto;
+  padding-top: 0;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.08);
+  z-index: 1025;
+}
+
+.sidebar-menu {
+  padding: 20px 0;
+}
+
+.menu-section {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background-color: #fafafa;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s;
+  user-select: none;
+}
+
+.menu-title:hover {
+  background-color: #f0f0f0;
+  color: var(--color-point1);
+}
+
+.menu-title.active {
+  background-color: #e8f5e9;
+  color: var(--color-point1);
+}
+
+.menu-title i {
+  font-size: 0.75rem;
+  transition: transform 0.3s;
+}
+
+.menu-title.active i {
+  transform: rotate(180deg);
+}
+
+.menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+}
+
+.menu-items.expanded {
+  display: block;
+}
+
+.menu-items li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items a {
+  display: block;
+  padding: 12px 24px;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menu-items a:hover {
+  background-color: #f0f7f0;
+  color: var(--color-point1);
+  padding-left: 28px;
+  border-left-color: var(--color-point1);
+}
+
+.menu-items a.active {
+  background-color: #e8f5e9;
+  color: var(--color-point1);
+  font-weight: 600;
+  border-left-color: var(--color-point1);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
 @media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -240px;
+    transition: left 0.3s;
+    z-index: 1025;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .page-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) {
   .agency-footer .footer-row { flex-direction: column; }
 }
 
@@ -208,10 +341,50 @@ a:hover { color: gray; }
 
 a { color: var(--color-point1); }
 
+/* 페이지 상단 타이틀 배너 (.page-hero) - 모든 페이지 통일 헤더 */
+.page-hero {
+  position: relative;
+  background-color: #f0f2f5;
+  padding: 30px 0 20px;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.page-hero-bg-text {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(0,0,0,0.04);
+  letter-spacing: 2px;
+  user-select: none;
+  line-height: 1;
+  font-style: italic;
+  top: -5px;
+  left: 10px;
+}
+
+.page-hero-content {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.page-hero h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding-top: 20px;
+}
+
 /* 페이지 상단 타이틀 배너 (.index-video-intro) */
 .index-video-intro {
   position: relative;
-  background-image: linear-gradient(90deg, #20345a 0, #476991 100%);
+  background-image: linear-gradient(90deg, #1b5e20 0, #2e7d32 100%);
   padding: 60px 0 30px;
   overflow: hidden;
 }
@@ -240,12 +413,9 @@ a { color: var(--color-point1); }
   margin-top: 10px;
 }
 
-/* 섹션 헤더 배너 (.pricing-charts-header) */
+/* 섹션 헤더 배너 (.pricing-charts-header) - .page-hero로 통합됨 */
 .pricing-charts-header {
-  min-height: 100px;
-  background-image: linear-gradient(90deg, #20345a 0, #476991 100%);
-  display: flex;
-  align-items: center;
+  display: none; /* 제거됨 - .page-hero 사용 */
 }
 .pricing-charts-header section { padding: 20px 0; }
 .pricing-charts-header h3 {

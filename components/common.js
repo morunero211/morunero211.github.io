@@ -39,6 +39,46 @@
     '</nav>'
   ].join('');
 
+  /* ── 사이드바 메뉴 HTML ────────────────────────── */
+  var SIDEBAR = [
+    '<aside class="sidebar">',
+    '  <div class="sidebar-menu">',
+    '    <div class="menu-section">',
+    '      <div class="menu-title" data-toggle="section-1">',
+    '        <span>회사소개</span>',
+    '        <i class="fas fa-chevron-down"></i>',
+    '      </div>',
+    '      <ul class="menu-items" id="section-1">',
+    '        <li><a href="ceo_greeting.html">대표자 인사말</a></li>',
+    '        <li><a href="history.html">회사연혁</a></li>',
+    '        <li><a href="org_chart.html">조직도</a></li>',
+    '        <li><a href="certification.html">인허가현황</a></li>',
+    '      </ul>',
+    '    </div>',
+    '    <div class="menu-section">',
+    '      <div class="menu-title" data-toggle="section-2">',
+    '        <span>사업영역</span>',
+    '        <i class="fas fa-chevron-down"></i>',
+    '      </div>',
+    '      <ul class="menu-items" id="section-2">',
+    '        <li><a href="project.html">사업분야</a></li>',
+    '        <li><a href="records.html">실적현황</a></li>',
+    '      </ul>',
+    '    </div>',
+    '    <div class="menu-section">',
+    '      <div class="menu-title" data-toggle="section-3">',
+    '        <span>커뮤니티</span>',
+    '        <i class="fas fa-chevron-down"></i>',
+    '      </div>',
+    '      <ul class="menu-items" id="section-3">',
+    '        <li><a href="contact.html">오시는길</a></li>',
+    '        <li><a href="board.html">고객문의</a></li>',
+    '      </ul>',
+    '    </div>',
+    '  </div>',
+    '</aside>'
+  ].join('\n');
+
   /* ── 푸터 HTML ──────────────────────────────── */
   var FOOTER = [
     '<footer class="agency-footer">',
@@ -74,9 +114,35 @@
 
   /* ── 삽입 ───────────────────────────────────── */
   function inject() {
+    // 1. navbar 주입
     var n = document.getElementById('navbar-placeholder');
-    var f = document.getElementById('footer-placeholder');
     if (n) n.outerHTML = NAV;
+    
+    // 2. 사이드바를 navbar 다음에 주입
+    var sidebarContainer = document.createElement('div');
+    sidebarContainer.className = 'page-wrapper';
+    sidebarContainer.innerHTML = SIDEBAR + '<div class="main-content"></div>';
+    
+    var navbar = document.querySelector('.navbar');
+    if (navbar && navbar.nextSibling) {
+      navbar.parentNode.insertBefore(sidebarContainer, navbar.nextSibling);
+      
+      // 3. navbar와 footer 사이의 컨텐츠를 main-content로 이동
+      var footer = document.querySelector('.agency-footer');
+      var mainContent = sidebarContainer.querySelector('.main-content');
+      
+      var current = navbar.nextSibling;
+      while (current && current !== sidebarContainer && current !== footer) {
+        if (current.nodeType === 1 || current.nodeType === 3 && current.textContent.trim()) {
+          mainContent.appendChild(current);
+        } else {
+          current = current.nextSibling;
+        }
+      }
+    }
+    
+    // 4. footer 주입
+    var f = document.getElementById('footer-placeholder');
     if (f) f.outerHTML = FOOTER;
   }
 
@@ -111,6 +177,18 @@
         var item = document.getElementById(id);
         if (item) item.classList.toggle('open');
       }
+      
+      // 사이드바 메뉴 토글
+      var menuTitle = e.target.closest('.menu-title');
+      if (menuTitle) {
+        e.preventDefault();
+        var toggleId = menuTitle.getAttribute('data-toggle');
+        var items = document.getElementById(toggleId);
+        if (items) {
+          items.classList.toggle('expanded');
+          menuTitle.classList.toggle('active');
+        }
+      }
     });
   }
 
@@ -118,6 +196,8 @@
   function setActive() {
     var page = window.location.pathname.split('/').pop() || 'home.html';
     page = page.split('?')[0] || 'home.html';
+    
+    // 상단 네비게이션 활성화
     document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item')
       .forEach(function (a) {
         var href = (a.getAttribute('href') || '').split('?')[0];
@@ -130,9 +210,38 @@
           }
         }
       });
+    
+    // 사이드바 메뉴 활성화
+    document.querySelectorAll('.sidebar .menu-items a')
+      .forEach(function (a) {
+        var href = (a.getAttribute('href') || '').split('?')[0];
+        if (href && href !== '#' && href === page) {
+          a.classList.add('active');
+          // 부모 섹션 펼치기
+          var items = a.closest('.menu-items');
+          if (items) {
+            items.classList.add('expanded');
+            var title = document.querySelector('[data-toggle="' + items.id + '"]');
+            if (title) title.classList.add('active');
+          }
+        }
+      });
   }
 
-  function init() { inject(); initScroll(); initNav(); setActive(); }
+  function init() { 
+    inject(); 
+    initScroll(); 
+    initNav(); 
+    setActive(); 
+    
+    // 초기 메뉴 상태: 첫 번째 섹션 펼침
+    var firstItems = document.getElementById('section-1');
+    var firstTitle = document.querySelector('[data-toggle="section-1"]');
+    if (firstItems && firstTitle) {
+      firstItems.classList.add('expanded');
+      firstTitle.classList.add('active');
+    }
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

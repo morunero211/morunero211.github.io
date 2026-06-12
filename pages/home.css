@@ -80,7 +80,7 @@
 
 /* ===== CTA Band ===== */
 .cta-band {
-  background: linear-gradient(135deg, #1e2a3a 0%, #2c4a6e 100%);
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
   padding: 64px 0; text-align: center;
 }
 .cta-band h2 {
@@ -111,7 +111,7 @@
   font-weight: 500; white-space: nowrap; transition: border-color 0.2s, box-shadow 0.2s;
 }
 .partner-badge:hover {
-  border-color: var(--color-point1); box-shadow: 0 2px 8px rgba(58,87,126,0.15);
+  border-color: var(--color-point1); box-shadow: 0 2px 8px rgba(76,175,80,0.15);
 }
 
 @media (max-width: 768px) { .quicklinks-grid { grid-template-columns: 1fr 1fr; } }

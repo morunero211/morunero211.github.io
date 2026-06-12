@@ -13,10 +13,13 @@
 <body id="top">
   <div id="navbar-placeholder"></div>
 
-  <div class="index-video-intro">
-	<p class="bg-text" style="letter-spacing: -5px">
-		Organization
-	</p>
+  <div class="page-hero">
+    <div class="page-hero-bg-text">Organization</div>
+    <div class="page-hero-content"><h1>조직도</h1></div>
+  </div>
+
+  <div class="index-video-intro" style="padding: 0; background: none;">
+	<p class="bg-text" style="display:none; letter-spacing: -5px">Organization</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -31,43 +34,25 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div id="org_chart_content">
-    <div class="org-wrap">
-      <ul class="org-tree">
-        <li>
-          <span class="org-node root-node">대표이사</span>
-          <ul>
-            <li>
-              <span class="org-node dept-node">운영사업부</span>
-              <ul>
-                <li>
-                  <span class="org-node team-node">관리팀</span>
-                  <ul>
-                    <li><span class="org-node sub-node">총무</span></li>
-                    <li><span class="org-node sub-node">경리회계</span></li>
-                    <li><span class="org-node sub-node">업무팀</span></li>
-                  </ul>
-                </li>
-                <li><span class="org-node team-node">영업팀</span></li>
-              </ul>
-            </li>
-            <li>
-              <span class="org-node dept-node">기술사업부</span>
-              <ul>
-                <li><span class="org-node team-node">설비사업부</span></li>
-                <li><span class="org-node team-node">패키지사업부</span></li>
-                <li><span class="org-node team-node">부품사업부</span></li>
-                <li><span class="org-node team-node">ICT사업부</span></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
     </div>
 </div>
 			</div>
 		</div>
-	</div>
-</div>
+	</div> 
+  <div class="org-wrap">
+    <div class="org-image-container">
+      <img id="org-chart-img" src="" alt="조직도" style="display:none;">
+      <div class="org-image-placeholder">
+        <p> 
+          <script>
+          document.getElementById('org-chart-img').src = 'images/org_chart.png';
+          document.getElementById('org-chart-img').style.display = 'block';
+          </script>
+        </p>
+        <p style="font-size:12px; color:#bbb; margin-top:10px;">이미지가 준비되면 표시됩니다</p>
+      </div>
+    </div>
+  </div>
 
   <div id="footer-placeholder"></div>
 
@@ -75,6 +60,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../components/common.js"></script>
+  <script>
+    // 조직도 이미지 로드 (필요시 수정)
+    document.addEventListener('DOMContentLoaded', function() {
+      var imgElement = document.getElementById('org-chart-img');
+      // 이미지 경로를 아래에서 설정하세요
+      // imgElement.src = 'images/org-chart.png';
+      // imgElement.style.display = 'block';
+    });
+  </script>
   
 </body>
 </html>
