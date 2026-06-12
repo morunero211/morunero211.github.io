@@ -1,256 +1,267 @@
-/* ==============================================
-   조이산업 - 공통 스크립트
-   Navbar / Footer 삽입 + 인터랙션
-   ============================================== */
-(function () {
-  'use strict';
+/**
+ * ========================================================
+ * 📋 common.js - 모든 페이지에 공유 컴포넌트 주입
+ * ========================================================
+ * 기능:
+ *   - Navbar(GNB) 상단 고정 바 삽입
+ *   - LNB(좌측 네비게이션) 사이드바 삽입
+ *   - Footer 페이지 하단 푸터 삽입
+ *   - 페이지 콘텐츠 자동으로 .content-wrapper에 이동
+ * 레이아웃: Flexbox 기반 좌측 LNB + 우측 GNB/본문
+ * ======================================================== */
 
-  /* ── 네비 HTML ──────────────────────────────── */
-    var NAV = [
-    '<nav class="navbar" id="main-navbar">',
-    '  <div class="navbar-container">',
-    '    <a class="navbar-brand" href="home.html">',
-    '      <div class="brand-logo">JOY</div>',
-    '      조이산업',
-    '    </a>',
-    '    <button class="navbar-toggler" id="navToggler" aria-label="메뉴 열기">',
-    '      <i class="fas fa-bars"></i>',
-    '    </button>',
-    '    <div class="navbar-collapse" id="navbar-collapse">',
-    '      <ul class="navbar-nav">',
-    '        <li class="nav-item" id="aboutDropdown">',
-    '          <a class="nav-link dropdown-toggle" href="#" data-target="aboutDropdown">',
-    '            회사소개 <span class="caret"><i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></span>',
-    '          </a>',
-    '          <div class="dropdown-menu">',
-    '            <a class="dropdown-item" href="ceo_greeting.html">대표자 인사말</a>',
-    '            <a class="dropdown-item" href="history.html">회사연혁</a>',
-    '            <a class="dropdown-item" href="org_chart.html">조직도</a>',
-    '            <a class="dropdown-item" href="certification.html">인허가현황</a>',
-    '          </div>',
-    '        </li>',
-    '        <li class="nav-item"><a class="nav-link" href="project.html">사업분야</a></li>',
-    '        <li class="nav-item"><a class="nav-link" href="records.html">실적현황</a></li>',
-    '        <li class="nav-item"><a class="nav-link" href="contact.html">오시는길</a></li>',
-    '        <li class="nav-item"><a class="nav-link" href="board.html">고객문의</a></li>',
-    '      </ul>',
-    '    </div>',
-    '  </div>',
-    '</nav>'
-  ].join('');
+// ===== 드롭다운 메뉴 HTML (회사소개) =====
+var NAV = `
+<nav class="navbar" role="navigation">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="/">
+      <div class="brand-logo">JB</div>
+      <span>조이산업</span>
+    </a>
+    <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);">
+            회사소개
+            <i class="fas fa-chevron-down caret"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/pages/ceo_greeting.html">CEO 인사말</a>
+            <a class="dropdown-item" href="/pages/org_chart.html">조직도</a>
+            <a class="dropdown-item" href="/pages/history.html">연혁</a>
+            <a class="dropdown-item" href="/pages/certification.html">인허가현황</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/project.html">사업영역</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/records.html">실적/성과</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/board.html">커뮤니티</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/contact.html">오시는 길</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
 
-  /* ── 사이드바 메뉴 HTML ────────────────────────── */
-  var SIDEBAR = [
-    '<aside class="sidebar">',
-    '  <div class="sidebar-menu">',
-    '    <div class="menu-section">',
-    '      <div class="menu-title" data-toggle="section-1">',
-    '        <span>회사소개</span>',
-    '        <i class="fas fa-chevron-down"></i>',
-    '      </div>',
-    '      <ul class="menu-items" id="section-1">',
-    '        <li><a href="ceo_greeting.html">대표자 인사말</a></li>',
-    '        <li><a href="history.html">회사연혁</a></li>',
-    '        <li><a href="org_chart.html">조직도</a></li>',
-    '        <li><a href="certification.html">인허가현황</a></li>',
-    '      </ul>',
-    '    </div>',
-    '    <div class="menu-section">',
-    '      <div class="menu-title" data-toggle="section-2">',
-    '        <span>사업영역</span>',
-    '        <i class="fas fa-chevron-down"></i>',
-    '      </div>',
-    '      <ul class="menu-items" id="section-2">',
-    '        <li><a href="project.html">사업분야</a></li>',
-    '        <li><a href="records.html">실적현황</a></li>',
-    '      </ul>',
-    '    </div>',
-    '    <div class="menu-section">',
-    '      <div class="menu-title" data-toggle="section-3">',
-    '        <span>커뮤니티</span>',
-    '        <i class="fas fa-chevron-down"></i>',
-    '      </div>',
-    '      <ul class="menu-items" id="section-3">',
-    '        <li><a href="contact.html">오시는길</a></li>',
-    '        <li><a href="board.html">고객문의</a></li>',
-    '      </ul>',
-    '    </div>',
-    '  </div>',
-    '</aside>'
-  ].join('\n');
+// ===== 좌측 LNB 사이드바 HTML =====
+var SIDEBAR = `
+<div class="lnb-logo-area">
+  <div class="brand-logo">JB</div>
+  <div class="brand-text">조이산업</div>
+</div>
+<div class="lnb-menu-area">
+  <ul class="sidebar-menu">
+    <li class="menu-section">
+      <div class="menu-title" onclick="toggleMenu(this)">
+        <span>회사소개</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="menu-items">
+        <li><a href="/pages/ceo_greeting.html">CEO 인사말</a></li>
+        <li><a href="/pages/org_chart.html">조직도</a></li>
+        <li><a href="/pages/history.html">연혁</a></li>
+        <li><a href="/pages/certification.html">인허가현황</a></li>
+      </ul>
+    </li>
+    <li class="menu-section">
+      <div class="menu-title" onclick="toggleMenu(this)">
+        <span>사업영역</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="menu-items">
+        <li><a href="/pages/project.html">전체 프로젝트</a></li>
+      </ul>
+    </li>
+    <li class="menu-section">
+      <div class="menu-title" onclick="toggleMenu(this)">
+        <span>커뮤니티</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="menu-items">
+        <li><a href="/pages/records.html">실적/성과</a></li>
+        <li><a href="/pages/board.html">고객문의</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
 
-  /* ── 푸터 HTML ──────────────────────────────── */
-  var FOOTER = [
-    '<footer class="agency-footer">',
-    '  <a href="#top" class="go-top" id="goTopBtn" title="맨 위로">',
-    '    <i class="fas fa-chevron-up"></i>',
-    '    <span style="font-size:9px;letter-spacing:1px;">TOP</span>',
-    '  </a>',
-    '  <div class="container">',
-    '    <div class="footer-row">',
-    '      <div class="footer-col">',
-    '        <h4>Legal</h4>',
-    '        <p><a class="legal" href="http://www.maegu.com" target="_blank" rel="noopener noreferrer">',
-    '          &copy; JOY Industry Co., Ltd. 2018 All right reserved by MaeGu.com',
-    '        </a></p>',
-    '      </div>',
-    '      <div class="footer-col">',
-    '        <h4>Address</h4>',
-    '        <p>울산광역시 울주군 청량읍 화창1길 42-18</p>',
-    '      </div>',
-    '      <div class="footer-col">',
-    '        <h4>Contact</h4>',
-    '        <p>Tel : 052-249-9199</p>',
-    '        <p>Fax : 052-249-9250</p>',
-    '        <p>joy052@hanmail.net</p>',
-    '      </div>',
-    '    </div>',
-    '  </div>',
-    '</footer>',
-    '<a href="#" class="scrollup" id="scrollupBtn" title="맨 위로">',
-    '  <i class="fas fa-chevron-up"></i>',
-    '</a>'
-  ].join('\n');
+// ===== Footer HTML =====
+var FOOTER = `
+<div class="agency-footer">
+  <a href="javascript:void(0)" onclick="scrollToTop()" class="go-top">
+    <i class="fas fa-arrow-up"></i>
+    <span style="font-size:10px;">TOP</span>
+  </a>
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>회사명</h4>
+        <p>조이산업</p>
+        <p>대표: 이상협</p>
+      </div>
+      <div class="footer-col">
+        <h4>주소</h4>
+        <p>서울시 강남구 테헤란로 123</p>
+        <p>우 06000</p>
+      </div>
+      <div class="footer-col">
+        <h4>연락처</h4>
+        <p>Tel: (02) 1234-5678</p>
+        <p>Fax: (02) 1234-5679</p>
+      </div>
+      <div class="footer-col">
+        <h4>개인정보처리방침</h4>
+        <p><a href="javascript:void(0)" class="legal">개인정보 수집 및 이용</a></p>
+        <p><a href="javascript:void(0)" class="legal">서비스 이용약관</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-  /* ── 삽입 ───────────────────────────────────── */
-  function inject() {
-    // 1. navbar 주입
-    var n = document.getElementById('navbar-placeholder');
-    if (n) n.outerHTML = NAV;
-    
-    // 2. 홈 페이지 여부 확인 (home.html 또는 index.html은 LNB 제외)
-    var isHomePage = window.location.pathname.includes('home.html') || 
-                     window.location.pathname.includes('index.html') || 
-                     window.location.pathname === '/';
-    
-    // 3. 사이드바를 navbar 다음에 주입 (홈페이지 제외)
-    var sidebarContainer = document.createElement('div');
-    sidebarContainer.className = 'page-wrapper';
-    sidebarContainer.innerHTML = (isHomePage ? '' : SIDEBAR) + '<div class="main-content"></div>';
-    
-    var navbar = document.querySelector('.navbar');
-    if (navbar && navbar.nextSibling) {
-      navbar.parentNode.insertBefore(sidebarContainer, navbar.nextSibling);
-      
-      // 3. navbar와 footer 사이의 컨텐츠를 main-content로 이동
-      var footer = document.querySelector('.agency-footer');
-      var mainContent = sidebarContainer.querySelector('.main-content');
-      
-      var current = navbar.nextSibling;
-      while (current && current !== sidebarContainer && current !== footer) {
-        if (current.nodeType === 1 || current.nodeType === 3 && current.textContent.trim()) {
-          mainContent.appendChild(current);
-        } else {
-          current = current.nextSibling;
-        }
-      }
-    }
-    
-    // 4. footer 주입
-    var f = document.getElementById('footer-placeholder');
-    if (f) f.outerHTML = FOOTER;
-  }
+// ===== 메인 주입 함수 =====
+function inject() {
+  // 현재 페이지가 홈페이지인지 확인
+  var isHomePage = 
+    window.location.pathname.includes('home.html') ||
+    window.location.pathname.includes('index.html') ||
+    window.location.pathname === '/';
 
-  /* ── 스크롤 투 탑 ───────────────────────────── */
-  function initScroll() {
-    window.addEventListener('scroll', function () {
-      var btn = document.getElementById('scrollupBtn');
-      if (btn) btn.style.display = window.scrollY > 100 ? 'block' : 'none';
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest) return;
-      if (e.target.closest('#scrollupBtn') || e.target.closest('#goTopBtn')) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  }
+  // 1. site-container 생성 (Flexbox 레이아웃의 최상위 컨테이너)
+  var siteContainer = document.createElement('div');
+  siteContainer.className = 'site-container';
 
-  /* ── 모바일 네비 ─────────────────────────────── */
-  function initNav() {
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest) return;
-      if (e.target.closest('#navToggler')) {
-        var c = document.getElementById('navbar-collapse');
-        if (c) c.classList.toggle('open');
-        return;
-      }
-      var dl = e.target.closest('.dropdown-toggle');
-      if (dl && window.innerWidth <= 1200) {
-        e.preventDefault();
-        var id = dl.getAttribute('data-target');
-        var item = document.getElementById(id);
-        if (item) item.classList.toggle('open');
-      }
-      
-      // 사이드바 메뉴 토글
-      var menuTitle = e.target.closest('.menu-title');
-      if (menuTitle) {
-        e.preventDefault();
-        var toggleId = menuTitle.getAttribute('data-toggle');
-        var items = document.getElementById(toggleId);
-        if (items) {
-          items.classList.toggle('expanded');
-          menuTitle.classList.toggle('active');
-        }
-      }
-    });
-  }
-
-  /* ── 현재 페이지 메뉴 활성화 ─────────────────── */
-  function setActive() {
-    var page = window.location.pathname.split('/').pop() || 'home.html';
-    page = page.split('?')[0] || 'home.html';
-    
-    // 상단 네비게이션 활성화
-    document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item')
-      .forEach(function (a) {
-        var href = (a.getAttribute('href') || '').split('?')[0];
-        if (href && href !== '#' && href === page) {
-          a.classList.add('active');
-          var li = a.closest('.nav-item');
-          if (li) {
-            var pl = li.querySelector(':scope > .nav-link');
-            if (pl) pl.classList.add('active');
-          }
-        }
-      });
-    
-    // 사이드바 메뉴 활성화
-    document.querySelectorAll('.sidebar .menu-items a')
-      .forEach(function (a) {
-        var href = (a.getAttribute('href') || '').split('?')[0];
-        if (href && href !== '#' && href === page) {
-          a.classList.add('active');
-          // 부모 섹션 펼치기
-          var items = a.closest('.menu-items');
-          if (items) {
-            items.classList.add('expanded');
-            var title = document.querySelector('[data-toggle="' + items.id + '"]');
-            if (title) title.classList.add('active');
-          }
-        }
-      });
-  }
-
-  function init() { 
-    inject(); 
-    initScroll(); 
-    initNav(); 
-    setActive(); 
-    
-    // 초기 메뉴 상태: 첫 번째 섹션 펼침
-    var firstItems = document.getElementById('section-1');
-    var firstTitle = document.querySelector('[data-toggle="section-1"]');
-    if (firstItems && firstTitle) {
-      firstItems.classList.add('expanded');
-      firstTitle.classList.add('active');
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  // 2. 좌측 LNB 영역 (홈페이지에서는 숨김)
+  var sideLnbZone = document.createElement('div');
+  sideLnbZone.className = 'side-lnb-zone';
+  if (!isHomePage) {
+    sideLnbZone.innerHTML = SIDEBAR;
   } else {
-    init();
+    sideLnbZone.style.display = 'none';
+    document.body.classList.add('home-page');
   }
-}());
+
+  // 3. 우측 메인 바디 영역 (GNB + 콘텐츠)
+  var mainBodyZone = document.createElement('div');
+  mainBodyZone.className = 'main-body-zone';
+  mainBodyZone.innerHTML = `
+    <div id="navbar-placeholder"></div>
+    <div class="content-wrapper"></div>
+  `;
+
+  // 4. 구조 조합
+  siteContainer.appendChild(sideLnbZone);
+  siteContainer.appendChild(mainBodyZone);
+  
+  // 5. body 첫 번째 자식으로 삽입
+  document.body.insertBefore(siteContainer, document.body.firstChild);
+
+  // 6. 기존 본문 콘텐츠를 .content-wrapper로 이동
+  var contentWrapper = document.querySelector('.content-wrapper');
+  var originalContent = document.body.children;
+  
+  // site-container 이후의 모든 노드를 content-wrapper로 이동
+  while (document.body.children.length > 1) {
+    var node = document.body.children[1];
+    if (node !== siteContainer) {
+      contentWrapper.appendChild(node);
+    } else {
+      break;
+    }
+  }
+
+  // 7. Navbar 삽입
+  var navbarPlaceholder = document.getElementById('navbar-placeholder');
+  navbarPlaceholder.innerHTML = NAV;
+
+  // 8. Footer 삽입
+  contentWrapper.innerHTML = contentWrapper.innerHTML + FOOTER;
+
+  // 9. 메뉴 액티브 상태 설정
+  setActiveMenu();
+}
+
+// ===== 메뉴 토글 (좌측 LNB) =====
+function toggleMenu(element) {
+  var menuTitle = element;
+  var menuItems = menuTitle.nextElementSibling;
+  
+  // 같은 레벨의 다른 메뉴 닫기
+  var allSections = document.querySelectorAll('.menu-section');
+  allSections.forEach(function(section) {
+    var title = section.querySelector('.menu-title');
+    var items = section.querySelector('.menu-items');
+    if (title !== menuTitle) {
+      title.classList.remove('active');
+      items.classList.remove('expanded');
+    }
+  });
+
+  // 현재 메뉴 토글
+  menuTitle.classList.toggle('active');
+  menuItems.classList.toggle('expanded');
+}
+
+// ===== 네비게이션 토글 (모바일) =====
+function toggleNavbar() {
+  var navbarCollapse = document.getElementById('navbarNav');
+  navbarCollapse.classList.toggle('open');
+}
+
+// ===== 액티브 메뉴 설정 =====
+function setActiveMenu() {
+  var currentPath = window.location.pathname;
+  var menuLinks = document.querySelectorAll('.menu-items a');
+  
+  menuLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (currentPath.includes(href.replace(/\//g, ''))) {
+      link.classList.add('active');
+      // 부모 메뉴 자동 열기
+      var parentSection = link.closest('.menu-section');
+      if (parentSection) {
+        var menuTitle = parentSection.querySelector('.menu-title');
+        var menuItems = parentSection.querySelector('.menu-items');
+        menuTitle.classList.add('active');
+        menuItems.classList.add('expanded');
+      }
+    }
+  });
+
+  // Navbar 액티브 링크 설정
+  var navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && href !== 'javascript:void(0);' && currentPath.includes(href.replace(/\//g, ''))) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// ===== 스크롤 투 탑 =====
+function scrollToTop() {
+  var contentWrapper = document.querySelector('.content-wrapper');
+  if (contentWrapper) {
+    contentWrapper.scrollTop = 0;
+  } else {
+    window.scrollTop = 0;
+  }
+}
+
+// ===== 페이지 로드 시 실행 =====
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', inject);
+} else {
+  inject();
+}

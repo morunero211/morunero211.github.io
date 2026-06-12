@@ -20,6 +20,9 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .dropdown-extend-menu { min-width: 500px; padding: 15px; }
