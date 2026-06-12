@@ -108,7 +108,7 @@ a:hover { color: gray; }
   top: 100% !important;
   left: 0 !important;
   right: auto !important;
-  background-color: #2c3e50 !important;
+  background-color: var(--color-dark) !important;
   min-width: 180px !important;
   border: none !important;
   border-radius: 0 !important;
@@ -211,9 +211,9 @@ a:hover { color: gray; }
   background-color: #f5f5f5;
   border-right: 1px solid #e0e0e0;
   position: fixed;
-  left: 0;
-  top: calc(var(--navbar-height) + 120px);
-  height: calc(100vh - var(--navbar-height) - 120px);
+  left: 20px;
+  top: calc(var(--navbar-height) + 90px);
+  height: calc(100vh - var(--navbar-height) - 90px);
   overflow-y: auto;
   padding-top: 0;
   box-shadow: 2px 0 6px rgba(0,0,0,0.08);
@@ -305,8 +305,9 @@ a:hover { color: gray; }
 
 .main-content {
   flex: 1;
-  margin-left: 240px;
-  width: calc(100% - 240px);
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  padding: 30px 20px;
 }
 
 @media (max-width: 768px) {
@@ -345,9 +346,9 @@ a { color: var(--color-point1); }
 .page-hero {
   position: relative;
   background-color: #f0f2f5;
-  padding: 30px 0 20px;
+  padding: 20px 0;
   overflow: hidden;
-  min-height: 120px;
+  min-height: 90px;
   display: flex;
   align-items: center;
 }

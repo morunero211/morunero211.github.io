@@ -16,6 +16,12 @@
  * 사용 대상: pages/records.html
  * ======================================================== */
 
+#nav-tabContent {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .dropdown-extend-menu { min-width: 500px; padding: 15px; }
 .client-tab-link { color: var(--color-point1) !important; font-size: 0.9rem; }
 .nav-tabs { border-bottom: 2px solid var(--color-point1); }
