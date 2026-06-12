@@ -137,3 +137,82 @@ a:hover { color: gray; }
 @media (max-width: 768px) {
   .agency-footer .footer-row { flex-direction: column; }
 }
+
+/* ==============================================
+   공통 페이지 레이아웃 스타일 (모든 내부 페이지)
+   ============================================== */
+
+/* 페이지 기본 */
+body {
+  padding-top: var(--navbar-height);
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;
+}
+a { color: var(--color-point1); }
+
+/* 페이지 상단 타이틀 배너 (.index-video-intro) */
+.index-video-intro {
+  position: relative;
+  background-image: linear-gradient(90deg, #20345a 0, #476991 100%);
+  padding: 60px 0 30px;
+  overflow: hidden;
+}
+.index-video-intro .bg-text {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+  letter-spacing: -2px;
+  pointer-events: none;
+}
+.special-features { padding: 10px 0 0; }
+.index-video-title h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.index-video-title p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+/* 섹션 헤더 배너 (.pricing-charts-header) */
+.pricing-charts-header {
+  min-height: 100px;
+  background-image: linear-gradient(90deg, #20345a 0, #476991 100%);
+  display: flex;
+  align-items: center;
+}
+.pricing-charts-header section { padding: 20px 0; }
+.pricing-charts-header h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 공통 테이블 스타일 */
+table thead th {
+  background: var(--color-point1);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 8px 10px;
+}
+table tbody td {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+table tbody tr:nth-child(even) { background: #f8f9fa; }
+.img-fluid { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+  .index-video-intro .bg-text { font-size: 3.5rem; }
+}

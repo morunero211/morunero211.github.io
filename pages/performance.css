@@ -1,0 +1,67 @@
+/* 조이산업 - performance 페이지 스타일 */
+
+:root {
+      --color-light-bg: #f0f2f5;
+      --color-table-header: #f8f9fa;
+      --color-border: #ddd;
+      --color-text: #333;
+      --color-text-light: #666;
+    }
+    body { padding-top: var(--navbar-height); }
+    .page-hero {
+      position: relative; background-color: var(--color-light-bg);
+      padding: 30px 0 20px; overflow: hidden; min-height: 100px;
+    }
+    .page-hero-bg-text {
+      position: absolute; top: -5px; left: 10px; font-size: 7rem; font-weight: 900;
+      color: rgba(0,0,0,0.04); letter-spacing: 2px; user-select: none; line-height: 1; font-style: italic;
+    }
+    .page-hero-content { position: relative; max-width: 1140px; margin: 0 auto; padding: 0 30px; }
+    .page-hero h1 { font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin: 0; padding-top: 20px; }
+    .main-content { max-width: 1140px; margin: 0 auto; padding: 40px 30px 60px; }
+    .filter-section { margin-bottom: 30px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+    .filter-dropdown { position: relative; display: inline-block; }
+    .filter-btn {
+      background-color: #d4e4f0; color: var(--color-point1);
+      border: 1px solid var(--color-point1); padding: 10px 20px;
+      border-radius: 4px; cursor: pointer; font-size: 0.95rem; font-weight: 500; transition: all 0.3s;
+    }
+    .filter-btn:hover { background-color: var(--color-point1); color: #fff; }
+    .section-title {
+      font-size: 1.1rem; font-weight: 600; color: var(--color-text); margin-bottom: 20px;
+      padding-bottom: 10px; border-bottom: 2px solid var(--color-point1); display: inline-block;
+    }
+    .records-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background-color: #fff; }
+    .records-table thead { background-color: var(--color-table-header); }
+    .records-table thead th { padding: 15px; text-align: left; font-weight: 600; color: var(--color-text); border-bottom: 2px solid var(--color-border); font-size: 0.95rem; }
+    .records-table tbody tr { border-bottom: 1px dashed var(--color-border); transition: background-color 0.3s; }
+    .records-table tbody tr:hover { background-color: #fafafa; }
+    .records-table tbody td { padding: 12px 15px; color: var(--color-text); font-size: 0.9rem; }
+    .records-table tbody td:first-child { width: 60px; text-align: center; font-weight: 600; color: var(--color-point1); background-color: #f5f5f5; }
+    .records-table tbody td:nth-child(2) { width: 100px; color: var(--color-text-light); }
+    .company-logos-section { margin-top: 60px; }
+    .company-logos-section .section-title { display: block; margin-bottom: 30px; }
+    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .logo-item {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100px; background-color: #f9f9f9; border: 1px solid #e0e0e0;
+      border-radius: 4px; padding: 15px; text-align: center;
+      font-size: 0.85rem; color: var(--color-text-light); transition: all 0.3s;
+    }
+    .logo-item:hover { background-color: #f0f0f0; border-color: var(--color-point1); }
+    .logo-item img { max-width: 100%; max-height: 80px; object-fit: contain; }
+    @media (max-width: 768px) {
+      .page-hero-bg-text { font-size: 4rem; left: 0; }
+      .main-content { padding: 30px 15px 40px; }
+      .records-table { font-size: 0.85rem; }
+      .records-table thead th, .records-table tbody td { padding: 10px; }
+      .logo-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
+    }
+    @media (max-width: 480px) {
+      .page-hero h1 { font-size: 1.2rem; }
+      .filter-section { flex-direction: column; align-items: stretch; }
+      .filter-btn { width: 100%; }
+      .records-table { font-size: 0.75rem; }
+      .records-table thead th, .records-table tbody td { padding: 8px 5px; }
+      .logo-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    }

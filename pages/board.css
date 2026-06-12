@@ -1,0 +1,13 @@
+/* 조이산업 - board 페이지 스타일 */
+
+.board-placeholder {
+  background: #f8f9fa; border: 2px dashed #dee2e6;
+  border-radius: 8px; padding: 50px 20px;
+  text-align: center; color: #868e96;
+}
+.board-placeholder i { font-size: 3rem; margin-bottom: 16px; display: block; }
+.board-notice {
+  background: #fff3cd; border-left: 4px solid #ffc107;
+  padding: 12px 16px; margin-bottom: 20px;
+  font-size: 0.9rem; border-radius: 0 4px 4px 0;
+}

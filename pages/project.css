@@ -1,0 +1,29 @@
+/* 조이산업 - project 페이지 스타일 */
+
+.agency-intro { padding: 40px 0; border-bottom: 1px solid #eee; }
+.agency-intro:last-child { border-bottom: none; }
+.core_tech {
+  color: var(--color-point1); font-size: 1.2rem;
+  font-weight: 700; margin-bottom: 16px;
+}
+.core_tech span { vertical-align: middle; margin-right: 6px; }
+.product-sub1-list1 { font-size: 0.95rem; line-height: 2; color: #444; }
+.product-sub1-list1 .fa-ul { margin-left: 1.8em; }
+.product-item-li { font-size: 0.9rem; color: #555; }
+.product-sub1 { margin-bottom: 30px; }
+.bs-callout-box {
+  background: linear-gradient(90deg, #20345a 0, #476991 100%);
+  border-radius: 4px; padding: 10px 16px; margin-bottom: 12px;
+}
+.product-sub1-heading { color: #fff; font-weight: 600; font-size: 0.95rem; }
+.product-image { display: flex; gap: 8px; margin-bottom: 12px; }
+.product-image img {
+  width: 48%; border-radius: 4px; object-fit: cover; max-height: 180px;
+}
+.apply { color: var(--color-point1); }
+#project-showcase { padding: 40px 0; }
+#project-showcase h3 {
+  color: var(--color-point1); font-size: 1.1rem; font-weight: 700;
+  margin: 30px 0 16px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-point1);
+}

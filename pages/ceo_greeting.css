@@ -1,0 +1,20 @@
+/* 조이산업 - ceo_greeting 페이지 스타일 */
+
+.index-devices { background: #fff; padding: 40px 0; }
+.index-devices section {
+  display: flex; flex-wrap: wrap; gap: 30px;
+  max-width: 1140px; margin: 0 auto; padding: 0 15px;
+}
+.index-devices .devices {
+  width: 45%; min-width: 250px; flex-shrink: 0;
+  object-fit: cover; border-radius: 20px;
+}
+.index-devices h4 {
+  color: var(--color-point1); font-size: 1.2rem;
+  font-weight: 700; margin-bottom: 15px;
+}
+.index-devices p { font-size: 0.95rem; line-height: 1.9; color: #444; }
+@media (max-width: 768px) {
+  .index-devices section { flex-direction: column; }
+  .index-devices .devices { width: 100%; }
+}

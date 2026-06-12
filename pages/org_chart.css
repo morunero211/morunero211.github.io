@@ -1,0 +1,18 @@
+/* 조이산업 - org_chart 페이지 스타일 */
+
+.google-visualization-orgchart-table {
+  border-collapse: separate;
+  border-spacing: 6px;
+}
+.google-visualization-orgchart-table td {
+  background: #f5f8fa;
+  border: 1px solid #b8cfe4 !important;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+#org_chart_content {
+  overflow-x: auto;
+  padding: 20px 0;
+}

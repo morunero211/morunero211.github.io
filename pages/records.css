@@ -1,0 +1,16 @@
+/* 조이산업 - records 페이지 스타일 */
+
+.dropdown-extend-menu { min-width: 500px; padding: 15px; }
+.client-tab-link { color: var(--color-point1) !important; font-size: 0.9rem; }
+.nav-tabs { border-bottom: 2px solid var(--color-point1); }
+.nav-tabs .nav-link {
+  color: #555; border: 1px solid transparent;
+  border-radius: 4px 4px 0 0; font-size: 0.9rem;
+}
+.nav-tabs .nav-link.active {
+  background: var(--color-point1); color: #fff !important;
+  border-color: var(--color-point1);
+}
+@media (max-width: 768px) {
+  .dropdown-extend-menu { min-width: 280px; }
+}
