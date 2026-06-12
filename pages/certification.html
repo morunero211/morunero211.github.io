@@ -15,12 +15,10 @@
   <div class="page-hero">
     <div class="page-hero-bg-text">Certification</div>
     <div class="page-hero-content"><h1>인증서</h1></div>
+  </div>
 
-
-  <div class="index-video-intro" style="padding: 0; background: none;">
-    <p class="bg-text" style="display:none;">Certification</p>
-    <div class="container">
-      <div class="img-notice">
+  <div class="container">
+    <div class="img-notice">
   <i class="fas fa-exclamation-triangle"></i>
   <strong>이미지 경로 안내</strong>: 현재 인증서 이미지는 외부 서버(joysanup.com)에서 불러오고 있습니다.
   배포 전 <code>images/custom/certification/</code> 폴더에 이미지 파일을 복사하고 경로를 로컬로 변경해야 합니다.
@@ -235,91 +233,6 @@
     </div>
 
 
-  <script type="text/javascript">
-    var $scrollWrapper = $('.scroll-wrapper'),
-    $itemsWrapper = $scrollWrapper.find('.items'),
-    $items = $scrollWrapper.find('.item'),
-    itemWidth = $items.outerWidth()
-    totalWidth = ($items.length * itemWidth) + 500
-    
-    $itemsWrapper.css('width', totalWidth)
-  </script>
-
-  <script type="text/javascript">
-    $(function () {
-      var $quotes = $('.client-quote')
-      var $faces = $('.client-picture')
-
-      $faces.click(function (e) {
-        index = $faces.index(this)
-
-        $quotes.removeClass('active')
-        $quotes.eq(index).addClass('active')
-
-        $faces.removeClass('active')
-        $(this).addClass('active')
-      })
-    })
-  </script>
-
-  <script type="text/javascript">
-    $(function() {
-      $('#video').YTPlayer({
-        fitToBackground: false,
-        videoId: '9d8wWcJLnFI',
-        pauseOnScroll: false,
-        playerVars: {
-          modestbranding: 0,
-          autoplay: 1,
-          controls: 0,
-          showinfo: 0,
-          wmode: 'transparent',
-          branding: 0,
-          rel: 0,
-          autohide: 0
-        }
-      });
-    });
-  </script>
-
-	<script type="text/javascript">
-		$(function () {
-		 //$('.certification-each-item').popover();
-			$(".certification-each-item a.img-bg").on("click", function () {
-				var options = { 
-					focus:true,
-					show:true
-					};
-				var bg = $(this).css('background-image');
-				bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-				//var title = $(this).find('p:first').text();
-				var title = "";
-				$('#pop_modal .modal-title').text(title);
-				$('#popup_image').attr('src',bg);
-				$("#pop_modal").modal(options);
-				//alert(bg);
-			});
-		});
-	</script>
-	<div class="modal" tabindex="-1" role="dialog" id="pop_modal">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header" style="background-color:lavender;padding: 5px 20px 10px">
-					<h5 class="modal-title">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body" style="padding: 0">
-					<p><img id="popup_image" style="width:100%"></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="../components/common.js"></script>
 </body>
 </html>
