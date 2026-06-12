@@ -122,14 +122,14 @@
   padding: 80px 0; background: #fafafa;
 }
 .hexagon-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 50px; justify-items: center;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; justify-items: center;
   width: 100%; margin: 0 auto;
 }
 .hexagon-card {
-  width: 100%; max-width: 350px; height: 350px; display: flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 250px; height: 330px; display: flex; align-items: center; justify-content: center;
 }
 .hexagon {
-  position: relative; width: 320px; height: 320px; display: flex; align-items: center; justify-content: center;
+  position: relative; width: 300px; height: 300px; display: flex; align-items: center; justify-content: center;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background: var(--color-point1); box-shadow: 0 12px 32px rgba(76,175,80,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
