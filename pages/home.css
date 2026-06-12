@@ -119,50 +119,60 @@
 
 /* ===== Hexagon Section ===== */
 .hexagon-section {
-  padding: 60px 0; background: #fafafa;
+  padding: 80px 0; background: #fafafa;
 }
 .hexagon-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; justify-items: center;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 50px; justify-items: center;
 }
 .hexagon-card {
-  width: 100%; max-width: 300px; height: 300px; display: flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 350px; height: 350px; display: flex; align-items: center; justify-content: center;
 }
 .hexagon {
-  position: relative; width: 260px; height: 260px; display: flex; align-items: center; justify-content: center;
+  position: relative; width: 320px; height: 320px; display: flex; align-items: center; justify-content: center;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: var(--color-point1); box-shadow: 0 8px 24px rgba(76,175,80,0.25);
+  background: var(--color-point1); box-shadow: 0 12px 32px rgba(76,175,80,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hexagon:hover {
-  transform: scale(1.05); box-shadow: 0 12px 32px rgba(76,175,80,0.35);
+  transform: scale(1.08); box-shadow: 0 16px 40px rgba(76,175,80,0.4);
 }
 .hexagon-content {
-  text-align: center; color: #fff; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; color: #fff; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;
   height: 100%;
 }
 .hexagon-content i {
-  font-size: 2.5rem; margin-bottom: 12px; color: rgba(255,255,255,0.9);
+  font-size: 3rem; margin-bottom: 15px; color: rgba(255,255,255,0.95);
 }
 .hexagon-content h3 {
-  font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; line-height: 1.4;
+  font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; line-height: 1.3;
 }
 .hexagon-content p {
-  font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.85);
+  font-size: 0.9rem; line-height: 1.5; color: rgba(255,255,255,0.9);
 }
 
+@media (max-width: 1024px) {
+  .hexagon-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .hexagon-card { max-width: 300px; }
+  .hexagon { width: 280px; height: 280px; }
+  .hexagon-content i { font-size: 2.5rem; }
+  .hexagon-content h3 { font-size: 1.1rem; }
+  .hexagon-content p { font-size: 0.85rem; }
+}
 @media (max-width: 768px) {
-  .hexagon-grid { grid-template-columns: 1fr; gap: 30px; }
-  .hexagon-card { max-width: 250px; }
-  .hexagon { width: 220px; height: 220px; }
-  .hexagon-content i { font-size: 2rem; }
+  .hexagon-section { padding: 60px 0; }
+  .hexagon-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .hexagon-card { max-width: 250px; height: 280px; }
+  .hexagon { width: 240px; height: 240px; }
+  .hexagon-content { padding: 20px; }
+  .hexagon-content i { font-size: 2.2rem; margin-bottom: 10px; }
   .hexagon-content h3 { font-size: 1rem; }
   .hexagon-content p { font-size: 0.8rem; }
 }
 @media (max-width: 480px) {
-  .hexagon-grid { gap: 20px; }
-  .hexagon-card { max-width: 200px; }
-  .hexagon { width: 180px; height: 180px; }
-  .hexagon-content i { font-size: 1.8rem; }
-  .hexagon-content h3 { font-size: 0.9rem; margin-bottom: 8px; }
+  .hexagon-grid { grid-template-columns: 1fr; gap: 20px; }
+  .hexagon-card { max-width: 200px; height: 240px; }
+  .hexagon { width: 200px; height: 200px; }
+  .hexagon-content i { font-size: 2rem; }
+  .hexagon-content h3 { font-size: 0.95rem; margin-bottom: 8px; }
   .hexagon-content p { font-size: 0.75rem; }
 }
