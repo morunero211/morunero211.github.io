@@ -1,0 +1,139 @@
+/* ==============================================
+   조이산업 - 공통 스타일
+   Navbar / Footer / Base — 모든 페이지에서 공유
+   ============================================== */
+
+:root {
+  --color-point1: #3A577E;
+  --color-cyan:   #17a2b8;
+  --color-dark:   #1e2a3a;
+  --navbar-height: 56px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a { color: var(--color-point1); text-decoration: none; }
+a:hover { color: gray; }
+
+.container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1030;
+  background-color: var(--color-dark);
+  height: var(--navbar-height);
+  display: flex; align-items: center; padding: 0 1rem;
+}
+.navbar-container {
+  width: 100%; max-width: 1140px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.navbar-brand {
+  display: flex; align-items: center; gap: 8px;
+  color: #fff !important; font-size: 1.1rem; font-weight: 500; text-decoration: none;
+}
+.navbar-brand .brand-logo {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(255,255,255,0.85); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; color: #fff;
+  letter-spacing: 0; line-height: 1; flex-shrink: 0;
+}
+.navbar-nav { display: flex; align-items: center; list-style: none; gap: 0; }
+.nav-item { position: relative; }
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  padding: 0.5rem 1rem; font-size: 0.95rem;
+  display: flex; align-items: center; gap: 4px;
+  transition: color 0.2s; white-space: nowrap;
+}
+.nav-link:hover,
+.nav-link.active { color: var(--color-cyan) !important; }
+.nav-link .caret { font-size: 0.7rem; margin-left: 2px; }
+.dropdown-menu {
+  display: none; position: absolute; top: 100%; left: 0;
+  background-color: #2c3e50; min-width: 150px;
+  border: none; border-radius: 0; padding: 0.5rem 0; z-index: 1000;
+}
+.nav-item:hover .dropdown-menu { display: block; }
+.dropdown-item {
+  display: block; padding: 0.4rem 1rem;
+  color: rgba(255,255,255,0.8); font-size: 0.9rem;
+  white-space: nowrap; transition: background 0.15s;
+}
+.dropdown-item:hover,
+.dropdown-item.active { background-color: rgba(255,255,255,0.1); color: #fff; }
+.navbar-toggler {
+  display: none; background: none;
+  border: 1px solid rgba(255,255,255,0.5); border-radius: 4px;
+  padding: 4px 8px; cursor: pointer; color: #fff; font-size: 1.1rem;
+}
+
+/* ===== Footer ===== */
+.agency-footer {
+  position: relative; background-color: var(--color-dark);
+  margin-top: 100px; padding-top: 2em; padding-bottom: 1em;
+  color: rgba(255,255,255,0.7); font-size: 0.85rem;
+}
+.agency-footer .go-top {
+  position: absolute; left: 0; right: 0; margin: auto; top: -25px;
+  width: 50px; height: 50px; font-size: 12px; letter-spacing: 1px;
+  background: #fff; border-radius: 50%; text-align: center; color: #222;
+  text-decoration: none; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.agency-footer .go-top i { display: block; font-size: 16px; }
+.agency-footer .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+.agency-footer .footer-row { display: flex; flex-wrap: wrap; gap: 20px; }
+.agency-footer .footer-col { flex: 1; min-width: 200px; }
+.agency-footer h4 {
+  color: #fff; text-transform: uppercase; font-weight: 400; letter-spacing: 3px;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; margin-bottom: 0.8rem;
+}
+.agency-footer p { margin-bottom: 0.3rem; line-height: 1.6; }
+.agency-footer a.legal { text-decoration: none; color: rgba(255,255,255,0.7); }
+.agency-footer a.legal:hover { color: #fff; }
+
+/* ===== Scroll to Top ===== */
+.scrollup {
+  position: fixed; width: 32px; height: 32px; bottom: 0; right: 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 10px rgba(255,255,255,1);
+  z-index: 1000; background: #353D4D; display: none; text-align: center;
+}
+.scrollup i { margin-top: 8px; color: #fff; font-size: 14px; }
+.scrollup:hover { opacity: 0.85; }
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .navbar-toggler { display: block; }
+  .navbar-collapse {
+    display: none; position: absolute;
+    top: var(--navbar-height); left: 0; right: 0;
+    background-color: var(--color-dark); padding: 0.5rem 0;
+  }
+  .navbar-collapse.open { display: block; }
+  .navbar-nav { flex-direction: column; align-items: flex-start; padding: 0 1rem; }
+  .dropdown-menu {
+    position: static;
+    background-color: rgba(255,255,255,0.05); padding-left: 1rem;
+  }
+  .nav-item:hover .dropdown-menu { display: none; }
+  .nav-item.open .dropdown-menu { display: block; }
+}
+@media (max-width: 768px) {
+  .agency-footer .footer-row { flex-direction: column; }
+}
