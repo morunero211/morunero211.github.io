@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>조이산업 - 실적현황</title>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="components/common.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --color-light-bg: #f0f2f5;
+      --color-table-header: #f8f9fa;
+      --color-border: #ddd;
+      --color-text: #333;
+      --color-text-light: #666;
+    }
+    body { padding-top: var(--navbar-height); }
+    .page-hero {
+      position: relative; background-color: var(--color-light-bg);
+      padding: 30px 0 20px; overflow: hidden; min-height: 100px;
+    }
+    .page-hero-bg-text {
+      position: absolute; top: -5px; left: 10px; font-size: 7rem; font-weight: 900;
+      color: rgba(0,0,0,0.04); letter-spacing: 2px; user-select: none; line-height: 1; font-style: italic;
+    }
+    .page-hero-content { position: relative; max-width: 1140px; margin: 0 auto; padding: 0 30px; }
+    .page-hero h1 { font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin: 0; padding-top: 20px; }
+    .main-content { max-width: 1140px; margin: 0 auto; padding: 40px 30px 60px; }
+    .filter-section { margin-bottom: 30px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+    .filter-dropdown { position: relative; display: inline-block; }
+    .filter-btn {
+      background-color: #d4e4f0; color: var(--color-point1);
+      border: 1px solid var(--color-point1); padding: 10px 20px;
+      border-radius: 4px; cursor: pointer; font-size: 0.95rem; font-weight: 500; transition: all 0.3s;
+    }
+    .filter-btn:hover { background-color: var(--color-point1); color: #fff; }
+    .section-title {
+      font-size: 1.1rem; font-weight: 600; color: var(--color-text); margin-bottom: 20px;
+      padding-bottom: 10px; border-bottom: 2px solid var(--color-point1); display: inline-block;
+    }
+    .records-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background-color: #fff; }
+    .records-table thead { background-color: var(--color-table-header); }
+    .records-table thead th { padding: 15px; text-align: left; font-weight: 600; color: var(--color-text); border-bottom: 2px solid var(--color-border); font-size: 0.95rem; }
+    .records-table tbody tr { border-bottom: 1px dashed var(--color-border); transition: background-color 0.3s; }
+    .records-table tbody tr:hover { background-color: #fafafa; }
+    .records-table tbody td { padding: 12px 15px; color: var(--color-text); font-size: 0.9rem; }
+    .records-table tbody td:first-child { width: 60px; text-align: center; font-weight: 600; color: var(--color-point1); background-color: #f5f5f5; }
+    .records-table tbody td:nth-child(2) { width: 100px; color: var(--color-text-light); }
+    .company-logos-section { margin-top: 60px; }
+    .company-logos-section .section-title { display: block; margin-bottom: 30px; }
+    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .logo-item {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100px; background-color: #f9f9f9; border: 1px solid #e0e0e0;
+      border-radius: 4px; padding: 15px; text-align: center;
+      font-size: 0.85rem; color: var(--color-text-light); transition: all 0.3s;
+    }
+    .logo-item:hover { background-color: #f0f0f0; border-color: var(--color-point1); }
+    .logo-item img { max-width: 100%; max-height: 80px; object-fit: contain; }
+    @media (max-width: 768px) {
+      .page-hero-bg-text { font-size: 4rem; left: 0; }
+      .main-content { padding: 30px 15px 40px; }
+      .records-table { font-size: 0.85rem; }
+      .records-table thead th, .records-table tbody td { padding: 10px; }
+      .logo-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
+    }
+    @media (max-width: 480px) {
+      .page-hero h1 { font-size: 1.2rem; }
+      .filter-section { flex-direction: column; align-items: stretch; }
+      .filter-btn { width: 100%; }
+      .records-table { font-size: 0.75rem; }
+      .records-table thead th, .records-table tbody td { padding: 8px 5px; }
+      .logo-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    }
+  </style>
+</head>
+<body id="top">
+  <div id="navbar-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-bg-text">Records</div>
+    <div class="page-hero-content"><h1>실적현황(요약)</h1></div>
+  </div>
+
+  <div class="main-content">
+    <div class="filter-section">
+      <div class="filter-dropdown">
+        <button class="filter-btn">협력업체 및 거래처 실적현황</button>
+      </div>
+    </div>
+    <div class="section-title">한화임팩트(주)</div>
+    <table class="records-table">
+      <thead><tr><th>No</th><th>기간</th><th>공사내역</th></tr></thead>
+      <tbody>
+        <tr><td>38</td><td>2021.12</td><td>냉난방기 설치공사(본관2층 비상통제실)</td></tr>
+        <tr><td>37</td><td>2021.12</td><td>전공장 공조설비 점검 및 난방전환 공사</td></tr>
+        <tr><td>36</td><td>2021.02</td><td>2공장 CCR 공조설비 개선공사</td></tr>
+        <tr><td>35</td><td>2020.12</td><td>2공장 CCR 공조설비 개선공사</td></tr>
+        <tr><td>34</td><td>2020.12</td><td>난방기 난방전환 및 점검공사</td></tr>
+        <tr><td>33</td><td>2020.08</td><td>냉방기 점검 후 보수공사</td></tr>
+        <tr><td>32</td><td>2020.08</td><td>전공장 냉방기 점검 및 보수공사</td></tr>
+        <tr><td>31</td><td>2019.11</td><td>냉분석실 냉온풍기 설치공사</td></tr>
+        <tr><td>30</td><td>2019.10</td><td>냉방기 긴급보수 공사</td></tr>
+        <tr><td>29</td><td>2019.07</td><td>CCR 2층 공조설비 교체작업</td></tr>
+        <tr><td>28</td><td>2019.07</td><td>19년도 상반기 냉방기 점검 및 냉방전환공사</td></tr>
+        <tr><td>27</td><td>2019.06</td><td>사원목욕탕 공조설비 교체공사</td></tr>
+        <tr><td>26</td><td>2019.03</td><td>복지관2층 공조설비 보수작업(증발기) - 40R/T</td></tr>
+        <tr><td>25</td><td>2019.01</td><td>공조설비 및 에어컨 보수공사</td></tr>
+        <tr><td>24</td><td>2018.06</td><td>전공장 공조설비 점검 및 에어컨 보수작업</td></tr>
+        <tr><td>23</td><td>2018.05</td><td>CCR 1층 공조설비 교체작업</td></tr>
+        <tr><td>22</td><td>2018.02</td><td>CCR 2층 공조설비 Steam coil 교체작업</td></tr>
+        <tr><td>21</td><td>2017.12</td><td>하반기 공조 설비 점검 및 CCR 덕트 청소 도급 공사</td></tr>
+        <tr><td>20</td><td>2017.10</td><td>냉동기 효율화 에어컨 교체공사</td></tr>
+        <tr><td>19</td><td>2017.06</td><td>전공장 냉방기 보수공사(26개소)</td></tr>
+        <tr><td>18</td><td>2017.05</td><td>출하사무실 제품포장실 공조 설비 교체 공사</td></tr>
+        <tr><td>17</td><td>2017.05</td><td>공조 설비 점검 및 필터 교체 공사</td></tr>
+        <tr><td>16</td><td>2017.04</td><td>Chiller 압축기 Overhaul 작업(13공장)</td></tr>
+        <tr><td>15</td><td>2015.12</td><td>2공장 MCC Room 양압설비공사</td></tr>
+        <tr><td>14</td><td>2014.07</td><td>공랭식150R/T_복지관 본관동 냉동기 교체 공사</td></tr>
+        <tr><td>13</td><td>2014.06</td><td>CCR 1,2층 및 MCC ROOM 공조설비 개선작업</td></tr>
+        <tr><td>12</td><td>2013.05</td><td>냉·난방 및 공조 설비 보수 공사</td></tr>
+        <tr><td>11</td><td>2012.11</td><td>공조 설비 유지보수.실험실 후드 보완작업</td></tr>
+        <tr><td>10</td><td>2011.06</td><td>전공장_공조 설비 Duct Cleaning 공사</td></tr>
+        <tr><td>9</td><td>2002.03</td><td>기존 P-A/C 방폭으로 개조</td></tr>
+        <tr><td>8</td><td>2001.01</td><td>NO.2 CCR_30R/T 2대_배관설비공사(항온항습기 포함)</td></tr>
+        <tr><td>7</td><td>1999.02</td><td>NO.2_60R/T_방폭형CHILLER냉동기 납품 및 설치(D2G4)</td></tr>
+        <tr><td>6</td><td>1998.08</td><td>C/R 양압설비작업</td></tr>
+        <tr><td>5</td><td>1997.10</td><td>활성탄 교체 작업</td></tr>
+        <tr><td>4</td><td>1997.05</td><td>본관복지관_공조설비 VAV SYSTEM으로 개선함</td></tr>
+        <tr><td>3</td><td>1995.06</td><td>기술서비스팀_P-A/C 납품/설치 및 DUCT 설비 공사</td></tr>
+        <tr><td>2</td><td>1995.01</td><td>NO.1.2 C/R_양압 설비공사(항온항습기, DUCT포함)</td></tr>
+        <tr><td>1</td><td>1992.02</td><td>NO.2 C/R B/D_30R/T 2대_C/R HVAC 설비 개보수 공사</td></tr>
+      </tbody>
+    </table>
+
+    <div class="company-logos-section">
+      <div class="section-title">주요 협력업체 및 거래처</div>
+      <div class="logo-grid">
+        <div class="logo-item">고려아연(주)</div>
+        <div class="logo-item">국민건강보험</div>
+        <div class="logo-item">대림</div>
+        <div class="logo-item">귀뚜라미 범양냉방</div>
+        <div class="logo-item">대한적십자사</div>
+        <div class="logo-item">대한화섬</div>
+        <div class="logo-item">동부한농화학</div>
+        <div class="logo-item">롯데비피화학</div>
+        <div class="logo-item">롯데 INEOS</div>
+        <div class="logo-item">무림피앤피</div>
+        <div class="logo-item">미원상사</div>
+        <div class="logo-item">삼성비피화학</div>
+        <div class="logo-item">삼성전자</div>
+        <div class="logo-item">삼성정밀화학</div>
+        <div class="logo-item">삼양사</div>
+        <div class="logo-item">S-OIL</div>
+        <div class="logo-item">쌍용엔지니어링</div>
+        <div class="logo-item">용산화학</div>
+        <div class="logo-item">우림산업</div>
+        <div class="logo-item">울산광역시</div>
+        <div class="logo-item">울산대학교</div>
+        <div class="logo-item">울산화력</div>
+        <div class="logo-item">한화석유화학</div>
+        <div class="logo-item">한화종합화학</div>
+        <div class="logo-item">현대미포조선</div>
+        <div class="logo-item">현대하이스코</div>
+        <div class="logo-item">효성</div>
+        <div class="logo-item">ISU 화학</div>
+        <div class="logo-item">한화임팩트</div>
+        <div class="logo-item">송원산업</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="components/common.js"></script>
+</body>
+</html>

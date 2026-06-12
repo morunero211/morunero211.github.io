@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>조이산업 - 오시는길</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="components/common.css" rel="stylesheet">
+  
+  <style>
+body {
+  padding-top: var(--navbar-height);
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;
+}
+a { color: var(--color-point1); }
+.index-video-intro {
+  position: relative;
+  background-image: linear-gradient(90deg, #20345a 0, #476991 100%);
+  padding: 60px 0 30px;
+  overflow: hidden;
+}
+.index-video-intro .bg-text {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.index-video-title h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.index-video-title p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+.special-features { padding: 10px 0 0; }
+
+.blog-cols-wrapper {
+  padding: 50px 0 60px;
+}
+.widget-contact h4 {
+  color: var(--color-point1);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.widget-contact p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #444;
+}
+.widget-contact .fa { color: var(--color-point1); }
+
+/* 카카오맵 */
+#daumRoughmapContainer1637583336400 {
+  width: 100%;
+  height: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+@media (max-width: 768px) {
+  .widget-contact { margin-bottom: 30px; }
+}
+  </style>
+</head>
+<body id="top">
+  <div id="navbar-placeholder"></div>
+
+  <div class="index-video-intro">
+  <p class="bg-text">Contact</p>
+  <div class="special-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="index-video-title clearfix">
+            <h3>오시는길</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="blog-cols-wrapper">
+	<div class="container">
+		<div class="row">
+    <!--연락처 시작-->
+		<div class="col-lg-5">
+			<div class="widget-contact">
+				<h4>(주)조이산업</h4>
+				<br>
+				<p style="line-height: 20px;text-align: justify">
+				  <!--<span class="fa fa-map-marker-alt fa-lg" style="width:1em"></span> -->울산광역시 울주군 청량읍 화창1길 42-18<br>
+					지번 : 울산광역시 울주군 청량읍 상남리 340-6<br>
+				</p>
+				<p style="line-height: 30px;text-align: justify">
+				  <span class="fa fa-phone-square fa-lg" style="width:1em"></span> 전화 : 052-249-9199
+          <br>
+				  <span class="fa fa-fax fa-lg" style="width:1em"></span> 팩스 : 052-249-9250
+          <br>
+				  <span class="fa fa-envelope fa-lg" style="width:1em"></span> 메일 : joy052@hanmail.net
+				</p>
+			</div>	
+		</div>
+    <!--연락처 종료-->
+		<!--구글 도 도시작-->
+		<!--
+		<div class="map col-lg-7" id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.749235245289!2d129.3086223646449!3d35.48574774827654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35662ccff1b5f279%3A0xa18db0b484c20232!2z7Jq47IKw6rSR7Jet7IucIOyauOyjvOq1sCDssq3rn4nrqbQg7ZmU7LC9Meq4uA!5e0!3m2!1sko!2skr!4v1637570318150!5m2!1sko!2skr" width="100%" height="450" frameborder="0" style="border:groove" allowfullscreen></iframe>
+		</div>
+		-->
+		<!--구글 지도 종료-->
+		<!--카카오맵 지도 시작-->
+		<!-- 1. 지도 노드 -->
+		<div id="daumRoughmapContainer1637583336400" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+		<!--
+			2. 설치 스크립트
+			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+		-->
+		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><script charset="UTF-8" src="http://t1.kakaocdn.net/kakaomapweb/roughmap/place/prod/207038f2_1774248312945/roughmapLander.js"></script>
+
+		<!-- 3. 실행 스크립트 -->
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({
+				"timestamp" : "1637583336400",
+				"key" : "286d4",
+				"mapWidth" : "100%",
+				"mapHeight" : "320"
+			}).render();
+		</script>
+		<!-- 카카오맵 지도 종료-->
+		<div id="detail_descript_to_visit"></div>
+	</div>
+  </div>
+</div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="components/common.js"></script>
+  
+</body>
+</html>
