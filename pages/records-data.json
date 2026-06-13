@@ -1,0 +1,63 @@
+{
+  "companies": [
+    {
+      "id": "nav_01",
+      "name": "한화임팩트(주)",
+      "records": [
+        { "no": 38, "period": "2021.12", "content": "냉난방기 설치공사(본관2층 비상통제실)" },
+        { "no": 37, "period": "2021.12", "content": "전공장 공조설비 점검 및 난방전환 공사" },
+        { "no": 36, "period": "2021.02", "content": "2공장 CCR 공조설비 개선공사" },
+        { "no": 35, "period": "2020.12", "content": "2공장 CCR 공조설비 개선공사 " },
+        { "no": 34, "period": "2020.12", "content": "난방기 난방전환 및 점검공사" },
+        { "no": 33, "period": "2020.08", "content": "냉방기 점검 후 보수공사" },
+        { "no": 32, "period": "2020.08", "content": "전공장 냉방기 점검 및 보수공사" },
+        { "no": 31, "period": "2019.11", "content": "냉분석실 냉온풍기 설치공사" },
+        { "no": 30, "period": "2019.10", "content": "냉방기 긴급보수 공사" },
+        { "no": 29, "period": "2019.07", "content": "CCR 2층 공조설비 교체작업" },
+        { "no": 28, "period": "2019.07", "content": "19년도 상반기 냉방기 점검 및 냉방전환공사" },
+        { "no": 27, "period": "2019.06", "content": "사원목욕탕 공조설비 교체공사" },
+        { "no": 26, "period": "2019.03", "content": "복지관2층 공조설비 보수작업(증발기) - 40R/T" },
+        { "no": 25, "period": "2019.01", "content": "공조설비 및 에어컨 보수공사" },
+        { "no": 24, "period": "2018.06", "content": "전공장 공조설비 점검 및 에어컨 보수작업" },
+        { "no": 23, "period": "2018.05", "content": "CCR 1층 공조설비 교체작업" },
+        { "no": 22, "period": "2018.02", "content": "CCR 2층 공조설비 Steam coil 교체작업" },
+        { "no": 21, "period": "2017.12", "content": "하반기 공조 설비 점검 및 CCR 덕트 청소 도급 공사" },
+        { "no": 20, "period": "2017.10", "content": "냉동기 효율화 에어컨 교체공사" },
+        { "no": 19, "period": "2017.06", "content": "전공장 냉방기 보수공사(26개소)" },
+        { "no": 18, "period": "2017.05", "content": "출하사무실 제품포장실 공조 설비 교체 공사" },
+        { "no": 17, "period": "2017.05", "content": "공조 설비 점검 및 필터 교체 공사" },
+        { "no": 16, "period": "2017.04", "content": "Chiller 압축기 Overhaul 작업(13공장)" },
+        { "no": 15, "period": "2015.12", "content": "2공장 MCC Room 양압설비공사" },
+        { "no": 14, "period": "2014.07", "content": "공랭식150R/T_복지관 본관동 냉동기 교체 공사" },
+        { "no": 13, "period": "2014.06", "content": "CCR 1,2층 및 MCC ROOM 공조설비 개선작업" },
+        { "no": 12, "period": "2013.05", "content": "냉․난방 및 공조 설비 보수 공사" },
+        { "no": 11, "period": "2012.11", "content": "공조 설비 유지보수.실험실 후드 보완작업" },
+        { "no": 10, "period": "2011.06", "content": "전공장_공조 설비 Duct Cleaning 공사" },
+        { "no": 9, "period": "2002.03", "content": "기존 P-A/C 방폭으로 개조" },
+        { "no": 8, "period": "2001.01", "content": "NO.2 CCR_30R/T 2대_배관설비공사(항온항습기 포함)" },
+        { "no": 7, "period": "1999.02", "content": "NO.2_60R/T_방폭형CHILLER냉동기 납품 및 설치(D2G4)" },
+        { "no": 6, "period": "1998.08", "content": "C/R 양압설비작업" },
+        { "no": 5, "period": "1997.10", "content": "활성탄 교체 작업" },
+        { "no": 4, "period": "1997.05", "content": "본관복지관_공조설비 VAV SYSTEM으로 개선함" },
+        { "no": 3, "period": "1995.06", "content": "기술서비스팀_P-A/C 납품/설치 및 DUCT 설비 공사" },
+        { "no": 2, "period": "1995.01", "content": "NO.1.2 C/R_양압 설비공사(항온항습기, DUCT포함)" },
+        { "no": 1, "period": "1992.02", "content": "NO.2 C/R B/D_30R/T 2대_C/R HVAC 설비 개보수 공사" }
+      ]
+    },
+    {
+      "id": "nav_02",
+      "name": "한화케미칼(주)",
+      "records": [
+        { "no": 13, "period": "2016.09", "content": "울산2공장A_ABR생산1팀 국소배기장치 설치 공사" },
+        { "no": 12, "period": "2016.09", "content": "울산2공장A_ABR생산1팀 공정실 양압설비 설치 공사" }
+      ]
+    },
+    {
+      "id": "nav_03",
+      "name": "롯데이네오스화학(주)",
+      "records": [
+        { "no": 1, "period": "2021.06", "content": "공조설비 점검 및 유지보수" }
+      ]
+    }
+  ]
+}

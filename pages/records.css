@@ -23,8 +23,7 @@
 }
 
 /* ===== 기존 탭 콘텐츠 완전 숨김 ===== */
-#nav-tabContent,
-#tab-data-storage {
+#nav-tabContent {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
