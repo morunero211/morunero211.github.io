@@ -17,7 +17,36 @@
     <div class="page-hero-content"><h1>실적현황</h1></div>
   </div>
 
-  <div class="tab-content" id="nav-tabContent">
+  <section class="records-section">
+    <div class="container">
+      <div class="records-header">
+        <h3 class="records-title"><i class="fas fa-building"></i> 기업별 사업실적</h3>
+        <div class="filter-box">
+          <label for="company-filter" class="filter-label">기업 선택:</label>
+          <select id="company-filter" class="company-select">
+            <option value="">전체 기업</option>
+            <option value="nav_01">한화임팩트(주)</option>
+            <option value="nav_02">한화케미칼(주)</option>
+            <option value="nav_03">롯데이네오스화학(주)</option>
+            <option value="nav_04">(주)삼양사</option>
+            <option value="nav_05">(주)삼양제넥스</option>
+            <option value="nav_06">무림피앤피(주)</option>
+            <option value="nav_07">효성화학(주)</option>
+            <option value="nav_08">S-OIL(주)</option>
+            <option value="nav_09">태광산업(주)</option>
+            <option value="nav_10">현대미포조선(주)</option>
+            <option value="nav_11">울산화력</option>
+            <option value="nav_12">귀뚜라미범양냉방(주)</option>
+            <option value="nav_etc">기타</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="records-display" id="records-display">
+        <!-- JavaScript로 동적 렌더링 -->
+      </div>
+    </div>
+  </section>
 		<div class="tab-pane fade show active" id="nav_01" role="tabpanel">
 			<dl class="record_list">
 				<dt class="line"></dt>
@@ -2356,5 +2385,67 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="../components/common.js"></script>
+
+  <script>
+    // 기업별 데이터 추출 및 필터링
+    const companyData = {};
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabPanes.forEach(pane => {
+      const paneId = pane.id;
+      const companyName = pane.querySelector('.record_list dt:nth-of-type(2)')?.textContent || '';
+      const table = pane.querySelector('table');
+      
+      if (table && companyName) {
+        companyData[paneId] = {
+          name: companyName,
+          html: table.outerHTML
+        };
+      }
+    });
+
+    // 필터 선택 이벤트
+    document.getElementById('company-filter').addEventListener('change', function(e) {
+      const selectedId = e.target.value;
+      const recordsDisplay = document.getElementById('records-display');
+      
+      recordsDisplay.innerHTML = '';
+      
+      if (selectedId === '') {
+        // 전체 기업 표시
+        Object.keys(companyData).forEach(id => {
+          const section = document.createElement('div');
+          section.className = 'company-section';
+          section.innerHTML = `
+            <div class="company-header">
+              <h4>${companyData[id].name}</h4>
+            </div>
+            <div class="company-table">
+              ${companyData[id].html}
+            </div>
+          `;
+          recordsDisplay.appendChild(section);
+        });
+      } else if (companyData[selectedId]) {
+        // 선택한 기업만 표시
+        const section = document.createElement('div');
+        section.className = 'company-section';
+        section.innerHTML = `
+          <div class="company-header">
+            <h4>${companyData[selectedId].name}</h4>
+          </div>
+          <div class="company-table">
+            ${companyData[selectedId].html}
+          </div>
+        `;
+        recordsDisplay.appendChild(section);
+      }
+    });
+
+    // 페이지 로드 시 전체 데이터 표시
+    window.addEventListener('load', function() {
+      document.getElementById('company-filter').dispatchEvent(new Event('change'));
+    });
+  </script>
 </body>
 </html>
