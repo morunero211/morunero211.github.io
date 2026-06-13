@@ -33,34 +33,21 @@
 }
 
 /* ===== 조직도 이미지 영역 ===== */
-.org-image-container {
-  width: 200%;
-  max-width: 1200px;
-  background: #f5f5f5;
-  border: 2px dashed #ccc;
+.org-image-container,
+.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 60px auto;
   border-radius: 8px;
-  padding: 60px 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  min-height: 500px;
-  overflow: visible;
-
-}
-
-.org-image-container img {
-  max-width: 100% !important;
-  height: auto !important;
-  border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  /* 좌측 이동 가능: margin-left를 조정하면 왼쪽으로 이동 */
+  /* 기본값 auto는 완벽한 중앙정렬, 필요시 px 값으로 변경 */
 }
 
 .org-image-placeholder {
   color: #999;
   font-size: 14px;
   margin-top: 20px;
- 
 }
 

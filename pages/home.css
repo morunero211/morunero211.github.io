@@ -32,11 +32,11 @@
 .hero-body h1 {
   font-family: 'Noto Serif KR', serif; font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 700; color: #fff; line-height: 1.55; margin-bottom: 20px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5); max-width: 480px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5); max-width: 1000px;
 }
 .hero-body p {
   color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.8;
-  margin-bottom: 32px; max-width: 440px; text-align: justify;
+  margin-bottom: 32px; max-width: 600px; text-align: justify;
 }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-hero {
@@ -142,13 +142,13 @@
   height: 100%;
 }
 .hexagon-content i {
-  font-size: 3rem; margin-bottom: 15px; color: rgba(255,255,255,0.95);
+  font-size: 2.5rem; margin-bottom: 15px; color: rgba(255,255,255,0.95);
 }
 .hexagon-content h3 {
-  font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; line-height: 1.3;
+  font-size: 1.0rem; font-weight: 600; margin-bottom: 12px; line-height: 1.3;
 }
 .hexagon-content p {
-  font-size: 0.9rem; line-height: 1.5; color: rgba(255,255,255,0.9);
+  font-size: 0.8rem; line-height: 1.5; color: rgb(255, 255, 255);
 }
 
 @media (max-width: 1024px) {

@@ -377,13 +377,13 @@ a:hover {
 }
 
 .index-video-title h3 {
-  color: #fff;
+  color: #333;
   font-size: 1.6rem;
   font-weight: 600;
 }
 
 .index-video-title p {
-  color: rgba(255,255,255,0.8);
+  color: #555;
   font-size: 0.9rem;
   line-height: 1.8;
   margin-top: 10px;
