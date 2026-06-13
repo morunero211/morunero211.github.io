@@ -22,9 +22,15 @@
   line-height: 1; font-style: italic;
 }
 
-/* ===== 기존 탭 컨텐츠 숨김 ===== */
-#nav-tabContent {
+/* ===== 기존 탭 콘텐츠 완전 숨김 ===== */
+#nav-tabContent,
+#tab-data-storage {
   display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* ===== 실적현황 섹션 ===== */
