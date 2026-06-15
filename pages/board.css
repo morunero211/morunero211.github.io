@@ -3,15 +3,16 @@
  * 💬 board.css - 고객문의(Board) 페이지 스타일
  * ========================================================
  * 역할:
- *   - 게시판 레이아웃: 질문/답변 섹션
- *   - 공지사항: 안내 메시지 박스
- *   - 플레이스홀더: 게시판 준비 중 화면
- *   - 시각적 강조: 대시 보더 박스, 황색 주의문
+ *   - 연락처 정보 카드 레이아웃
+ *   - 반응형 그리드: 3개 카드
+ *   - 대형 아이콘 배지: 전화, 팩스, 이메일
+ *   - 호버 효과: 카드 상승 + 그림자
  * 내용:
- *   - .board-placeholder: 준비 중 화면 (중앙 정렬)
- *   - .board-placeholder i: 대형 아이콘 (3rem)
- *   - .board-notice: 황색 주의문 박스 (공지사항)
- *   - 배경/보더 색상: 회색/황색
+ *   - .contact-section: 섹션 컨테이너
+ *   - .contact-grid: 3개 열 그리드 레이아웃
+ *   - .contact-card: 개별 연락처 카드
+ *   - .contact-icon: 원형 아이콘 배지
+ *   - Fade-up 애니메이션 적용
  * 사용 대상: pages/board.html
  * ======================================================== */
 
@@ -27,14 +28,148 @@
   line-height: 1; font-style: italic;
 }
 
-.board-placeholder {
-  background: #f8f9fa; border: 2px dashed #dee2e6;
-  border-radius: 8px; padding: 50px 20px;
-  text-align: center; color: #868e96;
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--navbar-height) + 40px);
+  padding-bottom: 20px;
 }
-.board-placeholder i { font-size: 3rem; margin-bottom: 16px; display: block; }
-.board-notice {
-  background: #fff3cd; border-left: 4px solid #ffc107;
-  padding: 12px 16px; margin-bottom: 20px;
-  font-size: 0.9rem; border-radius: 0 4px 4px 0;
+
+.page-hero-content h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1e2d3d;
+  margin: 0;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeUpAnimation 0.8s ease-out forwards;
+}
+
+.contact-header h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1e2d3d;
+  margin-bottom: 16px;
+}
+
+.contact-header p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Contact Grid ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ===== Contact Card ===== */
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  animation: fadeUpAnimation 0.8s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(42, 157, 93, 0.15);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-point1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.contact-icon i {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e2d3d;
+  margin-bottom: 12px;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-point1);
+  margin-bottom: 8px;
+}
+
+.contact-value a {
+  color: var(--color-point1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-value a:hover {
+  color: var(--color-cyan);
+  text-decoration: underline;
+}
+
+.contact-hours {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-header {
+    margin-bottom: 40px;
+  }
+
+  .contact-header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
 }
