@@ -66,13 +66,13 @@
 .product-item-li { font-size: 0.9rem; color: #555; }
 .product-sub1 { margin-bottom: 30px; }
 .bs-callout-box {
-  background: linear-gradient(90deg, #20345a 0, #476991 100%);
+  background: linear-gradient(90deg, #0F4D33 0, #2A9D5D 100%);
   border-radius: 4px; padding: 10px 16px; margin-bottom: 12px;
 }
 .product-sub1-heading { color: #fff; font-weight: 600; font-size: 0.95rem; }
-.product-image { display: flex; gap: 8px; margin-bottom: 12px; }
+.product-image { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
 .product-image img {
-  width: 48%; border-radius: 4px; object-fit: cover; max-height: 180px;
+  flex: 1; border-radius: 4px; object-fit: contain; max-height: 250px; background: #f9f9f9; padding: 10px;
 }
 .apply { 
   color: #e74c3c; 
@@ -160,7 +160,7 @@
 .card-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #1b5e20;
+  color: var(--color-dark);
   margin: 0;
   word-break: keep-all;
 }
@@ -239,7 +239,7 @@
 .point-content h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1b5e20;
+  color: var(--color-dark);
   margin: 0 0 8px 0;
 }
 
@@ -287,7 +287,7 @@
 .case-title {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #1b5e20;
+  color: var(--color-dark);
   margin: 0 0 4px 0;
 }
 
@@ -359,7 +359,7 @@
 }
 
 .card-header {
-  background: linear-gradient(90deg, #4caf50 0, #66bb6a 100%);
+  background: linear-gradient(90deg, #6b9d8a 0, #8fb9a0 100%);
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
