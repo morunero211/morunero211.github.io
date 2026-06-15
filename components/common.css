@@ -6,9 +6,9 @@
  * ======================================================== */
 
 :root {
-  --color-point1: #4caf50;
-  --color-cyan:   #66bb6a;
-  --color-dark:   #1b5e20;
+  --color-point1: #2A9D5D;
+  --color-cyan:   #1B7C48;
+  --color-dark:   #0F4D33;
   --navbar-height: 56px;
   --border-light: #e0e0e0;
 }
@@ -154,7 +154,7 @@ a:hover {
   top: 100% !important;
   left: 0 !important;
   right: auto !important;
-  background-color: #84ae78 !important;
+  background-color: #2A9D5D !important;
   min-width: 180px !important;
   border: none !important;
   border-radius: 0 !important;

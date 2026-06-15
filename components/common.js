@@ -132,3 +132,32 @@ if (document.readyState === 'loading') {
 } else {
   inject();
 }
+
+// ===== 스크롤 트리거 애니메이션 초기화 =====
+function initScrollAnimation() {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  // fade-up 클래스를 가진 모든 요소에 옵저버 적용
+  const fadeUpElements = document.querySelectorAll('.fade-up');
+  fadeUpElements.forEach(function(element) {
+    observer.observe(element);
+  });
+}
+
+// DOMContentLoaded 후 애니메이션 초기화
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(initScrollAnimation, 100);
+});
