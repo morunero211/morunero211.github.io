@@ -36,7 +36,12 @@
   color: var(--color-point1); font-size: 1.3rem;
   font-weight: 700; margin-bottom: 16px;
 }
-.widget-contact p { font-size: 0.95rem; line-height: 1.9; color: #444; }
+.widget-contact p { 
+  font-size: 0.95rem; 
+  line-height: 1.9; 
+  color: #444; 
+  margin-bottom: 24px;}
+
 .widget-contact .fa { color: var(--color-point1); }
 #daumRoughmapContainer1637583336400 {
   width: 100%; height: 320px;
