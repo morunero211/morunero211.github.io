@@ -13,7 +13,7 @@ var NAV = `
 <nav class="navbar" role="navigation">
   <div class="navbar-container">
     <a class="navbar-brand" href="/">
-      <div class="brand-logo">JB</div>
+      <div class="brand-logo"><img src="../images/joy-log.png" alt="조이산업 로고" /></div>
       <span>조이산업</span>
     </a>
     <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Menu">
@@ -40,7 +40,7 @@ var NAV = `
           <a class="nav-link" href="/pages/records.html">실적현황</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/board.html">커뮤니티</a>
+          <a class="nav-link" href="/pages/board.html">고객문의</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/contact.html">오시는 길</a>
