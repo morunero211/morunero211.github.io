@@ -58,7 +58,7 @@
 .quicklinks-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
 }
-.quicklink-card {
+.qlink-card {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   background: #fff; border-radius: 10px; padding: 48px 32px;
   border: 2px solid #e0e0e0; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -67,12 +67,12 @@
   min-height: 240px;
   justify-content: center;
 }
-.quicklink-card.animate { animation: fadeUpAnimation 0.8s ease-out forwards; }
-.quicklink-card.animate:nth-child(1) { animation-delay: 0.1s; }
-.quicklink-card.animate:nth-child(2) { animation-delay: 0.2s; }
-.quicklink-card.animate:nth-child(3) { animation-delay: 0.3s; }
-.quicklink-card.animate:nth-child(4) { animation-delay: 0.4s; }
-.quicklink-card:hover {
+.qlink-card.fade-up { animation: fadeUpAnimation 0.8s ease-out forwards; }
+.qlink-card:nth-child(1) { animation-delay: 0.1s; }
+.qlink-card:nth-child(2) { animation-delay: 0.2s; }
+.qlink-card:nth-child(3) { animation-delay: 0.3s; }
+.qlink-card:nth-child(4) { animation-delay: 0.4s; }
+.qlink-card:hover {
   transform: translateY(-6px); box-shadow: 0 10px 30px rgba(58,87,126,0.15);
   color: #333 !important;
   border-color: var(--color-point1);
@@ -83,8 +83,8 @@
   margin-bottom: 20px;
 }
 .qlink-icon i { font-size: 1.8rem; color: #fff; }
-.quicklink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
-.quicklink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
+.qlink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
+.qlink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
 
 /* ===== CTA Band ===== */
 .cta-band {
@@ -93,7 +93,7 @@
 }
 .cta-band h2 {
   font-family: 'Noto Sans KR', 'Malgun Gothic', Dotum, sans-serif;
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #fff; margin-bottom: 10px;
+  font-size: clamp(2.0rem, 2.2vw, 2.5rem); color: #fff; margin-bottom: 10px;
 }
 .cta-band p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 28px; }
 .btn-outline-light {
