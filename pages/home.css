@@ -116,29 +116,6 @@
   justify-items: center;
   align-items: center;
 }
-.partner-badge {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e0e0e0;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  animation: fadeUpAnimation 0.6s ease-out forwards;
-  min-height: 70px;
-  font-size: 0.82rem; color: var(--color-point1);
-  font-weight: 500; white-space: normal; text-align: center;
-}
-.partner-badge:nth-child(1) { animation-delay: 0.05s; }
-.partner-badge:nth-child(2) { animation-delay: 0.1s; }
-.partner-badge:nth-child(3) { animation-delay: 0.15s; }
-.partner-badge:nth-child(4) { animation-delay: 0.2s; }
-.partner-badge:nth-child(5) { animation-delay: 0.25s; }
-.partner-badge:nth-child(6) { animation-delay: 0.3s; }
-.partner-badge:nth-child(7) { animation-delay: 0.35s; }
-.partner-badge:nth-child(8) { animation-delay: 0.4s; }
-.partner-badge:hover {
-  border-color: var(--color-point1); box-shadow: 0 2px 8px rgba(42, 157, 93, 0.15);
-}
 
 @media (max-width: 768px) { .quicklinks-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .quicklinks-grid { grid-template-columns: 1fr; } }
