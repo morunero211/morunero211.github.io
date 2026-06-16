@@ -18,11 +18,11 @@
  * ======================================================== */
 
 
-.agency-intro { 
+business-section { 
   padding: 50px 0; 
   border-bottom: 1px solid #eee; 
 }
-.agency-intro:last-child { border-bottom: none; }
+business-section:last-child { border-bottom: none; }
 .core_tech {
   color: var(--color-point1); 
   font-size: 1.4rem;
@@ -34,7 +34,7 @@
   vertical-align: middle; 
   margin-right: 8px; 
 }
-.agency-intro hr {
+business-section hr {
   border: none;
   border-top: 2px solid var(--color-point1);
   width: 80px;
@@ -53,7 +53,7 @@
 }
 .product-item-li { font-size: 0.9rem; color: #555; }
 .product-sub1 { margin-bottom: 30px; }
-.bs-callout-box {
+feature-highlight {
   background: linear-gradient(90deg, #0F4D33 0, #2A9D5D 100%);
   border-radius: 4px; padding: 10px 16px; margin-bottom: 12px;
 }
