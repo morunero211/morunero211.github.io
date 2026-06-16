@@ -60,10 +60,12 @@
 }
 .quicklink-card {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  background: #fff; border-radius: 10px; padding: 36px 24px;
-  border: 1px solid #e0e0e0; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  background: #fff; border-radius: 10px; padding: 48px 32px;
+  border: 2px solid #e0e0e0; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   color: #333 !important; text-decoration: none;
   transition: transform 0.22s, box-shadow 0.22s;
+  min-height: 240px;
+  justify-content: center;
 }
 .quicklink-card.animate { animation: fadeUpAnimation 0.8s ease-out forwards; }
 .quicklink-card.animate:nth-child(1) { animation-delay: 0.1s; }
@@ -73,6 +75,7 @@
 .quicklink-card:hover {
   transform: translateY(-6px); box-shadow: 0 10px 30px rgba(58,87,126,0.15);
   color: #333 !important;
+  border-color: var(--color-point1);
 }
 .qlink-icon {
   width: 68px; height: 68px; border-radius: 50%;
@@ -80,8 +83,8 @@
   margin-bottom: 20px;
 }
 .qlink-icon i { font-size: 1.8rem; color: #fff; }
-quicklink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
-quicklink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
+.quicklink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
+.quicklink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
 
 /* ===== CTA Band ===== */
 .cta-band {
