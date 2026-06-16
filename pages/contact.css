@@ -1,0 +1,51 @@
+/**
+ * ========================================================
+ * 📍 contact.css - 오시는길(Contact) 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - 연락처 정보: 주소/전화/이메일 표시
+ *   - 지도 임베드: Daum Map API 컨테이너
+ *   - 열린 시간: 영업시간 정보
+ *   - 아이콘 강조: Font Awesome 아이콘으로 항목 구분
+ * 내용:
+ *   - .blog-cols-wrapper: 메인 컨테이너 (상하 패딩)
+ *   - .widget-contact: 연락처 위젯 (반복 요소)
+ *   - .widget-contact h4: 제목 (포인트 컬러)
+ *   - .widget-contact p: 연락처 텍스트
+ *   - .widget-contact .fa: 아이콘 색상
+ *   - #daumRoughmapContainer1637583336400: 지도 컨테이너
+ *   - 반응형: 모바일에서 위젯 간격 조정
+ * 사용 대상: pages/contact.html
+ * ======================================================== */
+
+.page-hero {
+  padding: 70px 0 30px !important;
+  min-height: 165px !important;
+}
+
+.page-hero-bg-text { 
+  font-size: 6rem; 
+  color: rgba(0,0,0,0.05);
+  padding: 50px;
+}
+
+
+
+.blog-cols-wrapper { padding: 50px 0 60px; }
+.widget-contact h4 {
+  color: var(--color-point1); font-size: 1.3rem;
+  font-weight: 700; margin-bottom: 16px;
+}
+.widget-contact p { 
+  font-size: 0.95rem; 
+  line-height: 1.9; 
+  color: #444; 
+  margin-bottom: 24px;}
+
+.widget-contact .fa { color: var(--color-point1); }
+#daumRoughmapContainer1637583336400 {
+  width: 100%; height: 320px;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+@media (max-width: 768px) { .widget-contact { margin-bottom: 30px; } }

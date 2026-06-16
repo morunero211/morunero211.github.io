@@ -1,0 +1,60 @@
+/**
+ * ========================================================
+ * 📜 history.css - 회사소개(History) 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - 페이지 히어로: 상단 헤더 섹션 (배경 텍스트 워터마크)
+ *   - 연혁 타임라인: 연도별 주요 이력 표시
+ *   - 메인 컨텐츠: 회사 역사 본문
+ *   - 섹션 제목: 구간별 제목 스타일
+ * 내용:
+ *   - .page-hero: 상단 배너 (라이트 그레이 배경)
+ *   - .page-hero-bg-text: 워터마크 텍스트 (배경)
+ *   - .page-hero-content: 컨텐츠 영역
+ *   - .main-content: 본문 컨테이너
+ *   - .section-title: 섹션 제목
+ *   - dl.history: 연혁 정의 리스트
+ * 사용 대상: pages/history.html
+ * ======================================================== */
+
+.page-hero {
+  padding: 70px 0 30px !important;
+  min-height: 165px !important;
+}
+
+.page-hero-bg-text { 
+  font-size: 6rem; 
+  color: rgba(0,0,0,0.05);
+  padding: 50px;
+}
+
+
+.main-content { max-width: 1200px; margin: 0 auto; padding: 40px 30px 60px; }
+.section-title { margin-bottom: 30px; }
+.section-title h3 { font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 0; }
+
+
+dl.history {
+  border-top: 1px solid #dcdddc; width: 100%; min-height: 7em;
+  padding-bottom: 2em; position: relative; margin-bottom: 0;
+  max-width: 1000px; margin: 50px auto;
+}
+dl.history dt.line {
+  display: inline-block; border-top: 4px solid var(--color-point1);
+  width: 100px; position: absolute; top: -2px; left: 0;
+}
+dl.history dt {
+  
+  color: var(--color-point1); font-size: 2.3em; font-weight: 600;
+  padding-top: 10px; margin-bottom: 10px;
+}
+
+
+dl.history dd {
+  padding-left: 4.0em; padding-right: 0.5em; font-size : 1.2em;color: #555;
+  margin-left: 1.5em; text-indent: -1.5em; line-height: 1.3em; margin-bottom: 4px;
+}
+
+
+
+@media (max-width: 768px) { .page-hero-bg-text { font-size: 4rem; } }

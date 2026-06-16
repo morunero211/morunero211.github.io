@@ -1,0 +1,176 @@
+/**
+ * ========================================================
+ * 🏆 certification.css - 인증/자격증 페이지 스타일
+ * ========================================================
+ * 역할:
+ *   - 인증서 갤러리: 보증 이미지 표시
+ *   - 이미지 배경: 배경 이미지로 인증서 표시
+ *   - 공지사항: 이미지 로드 안내 메시지
+ *   - 모바일 최적화: 화면 크기별 레이아웃
+ * 내용:
+ *   - .img-notice: 황색 공지문 박스 (이미지 안내)
+ *   - .img-notice i: 경고 아이콘
+ *   - .certification-each-item: 개별 인증서 컨테이너
+ *   - .certification-each-item .img-bg: 배경 이미지 스타일
+ *   - 반응형: 576px 이하에서 패딩 감소
+ * 사용 대상: pages/certification.html
+ * ======================================================== */
+
+.page-hero {
+  padding: 70px 0 30px !important;
+  min-height: 165px !important;
+}
+
+.page-hero-bg-text { 
+  font-size: 6rem; 
+  color: rgba(0,0,0,0.05);
+  padding: 50px;
+}
+
+
+
+
+/* ===== Grid System (Bootstrap 대체) ===== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  margin: 0 10px;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+
+.index-video-title p {
+  margin-bottom: 20px;
+  font-size: 1.0rem; line-height: 1.8;
+}
+.img-notice {
+  background: #ffffff;
+  border-left: 4px solid #fff;
+  padding: 10px 16px;
+  margin: 20px 0 10px;
+  font-size: 0.85rem;
+  border-radius: 0 4px 4px 0;
+  color: #856404;
+}
+.img-notice i { margin-right: 6px; }
+.certification-each-item { 
+  padding-bottom: 2em;
+}
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .certification-each-item { padding-bottom: 1em; }
+}
+.certification-each-item .img-bg {
+  display: block; text-decoration: none; height: 450px; width: 100%;
+  background: no-repeat center top; background-size: contain;
+  position: relative; border: 1px solid rgba(75,87,104,0.4);
+  border-radius: 4px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  background-color: #f8f9fa;
+}
+.certification-each-item .img-bg:hover {
+  transform: scale3d(1.03,1.03,1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.certification-each-item .img-bg p {
+  position: absolute; bottom: 0; left: 0; right: 0; margin: 0;
+  padding: 10px 5px 6px;
+  background: linear-gradient(transparent, rgba(30,42,58,0.85));
+  color: #fff; font-size: 1.0rem; font-weight: 500;
+  text-align: center; border-radius: 0 0 4px 4px;
+}
+.certification-each-item .img-bg p span {
+  display: block; font-size: 0.75rem;
+  color: rgba(255,255,255,0.75); font-weight: 400; margin-top: 2px;
+}
+.cert-grid { padding: 30px 0 50px; }
+
+/* ===== 이미지 모달 라이트박스 ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  z-index: 2001;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+  
+  .modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
+}
