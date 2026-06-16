@@ -18,6 +18,16 @@
  * 사용 대상: pages/contact.html
  * ======================================================== */
 
+.page-hero {
+  padding: 70px 0 30px !important;
+  min-height: 165px !important;
+}
+
+.page-hero-bg-text { 
+  font-size: 6rem; 
+  color: rgba(0,0,0,0.05);
+  padding: 50px;
+}
 
 
 

@@ -8,21 +8,32 @@
  *   - 상품 이미지 갤러리: 2개 이미지 사이드바이사이드
  *   - 텍스트 포맷팅: 헤더/리스트/이미지 일관성
  * 내용:
- *   - .agency-intro: 사업 분야 섹션 (보더 구분)
+ *   - .business-section: 사업 분야 섹션 (보더 구분)
  *   - .core_tech: 기술 제목 스타일
  *   - .product-sub1-list1: 제품 설명 리스트
- *   - .bs-callout-box: 배경 강조 박스
+ *   - .feature-highlight: 배경 강조 박스
  *   - .product-image: 2개 이미지 레이아웃
  *   - #project-showcase: 사업 분야 섹션 그룹
  * 사용 대상: pages/project.html
  * ======================================================== */
 
+.page-hero {
+  padding: 70px 0 30px !important;
+  min-height: 165px !important;
+}
 
-business-section { 
+.page-hero-bg-text { 
+  font-size: 6rem; 
+  color: rgba(0,0,0,0.05);
+  padding: 50px;
+}
+
+
+.business-section { 
   padding: 50px 0; 
   border-bottom: 1px solid #eee; 
 }
-business-section:last-child { border-bottom: none; }
+.business-section:last-child { border-bottom: none; }
 .core_tech {
   color: var(--color-point1); 
   font-size: 1.4rem;
