@@ -17,16 +17,7 @@
  * 사용 대상: pages/project.html
  * ======================================================== */
 
-.page-hero {
-  padding: 70px 0 30px !important;
-  min-height: 165px !important;
-}
 
-.page-hero-bg-text { 
-  font-size: 6rem; 
-  color: rgba(0,0,0,0.05);
-  padding: 50px;
-}
 
 
 .business-section { 
@@ -75,8 +66,6 @@ feature-highlight {
 }
 
 @media (max-width: 768px) {
-  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
-  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
   .business-section { padding: 30px 0; }
   .core_tech { font-size: 1.2rem; margin-bottom: 15px; }
   .product-sub1-list1 { font-size: 0.9rem; line-height: 1.7; }
@@ -87,8 +76,6 @@ feature-highlight {
 }
 
 @media (max-width: 480px) {
-  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
-  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
   .business-section { padding: 20px 0; }
   .core_tech { font-size: 1rem; margin-bottom: 12px; }
   .product-sub1-list1 { font-size: 0.8rem; line-height: 1.6; }

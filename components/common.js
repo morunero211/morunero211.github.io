@@ -22,7 +22,7 @@ var NAV = `
     <div class="navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);">
+          <a class="nav-link" href="javascript:void(0);" onclick="toggleDropdown(this)">
             회사소개
             <i class="fas fa-chevron-down caret"></i>
           </a>
@@ -112,13 +112,20 @@ function toggleDropdown(element) {
 // ===== 액티브 메뉴 설정 =====
 function setActiveMenu() {
   var currentPath = window.location.pathname;
-  
-  // Navbar 액티브 링크 설정
-  var navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(function(link) {
+
+  // Navbar / 드롭다운 액티브 링크 설정
+  var links = document.querySelectorAll('.nav-link, .dropdown-item');
+  links.forEach(function(link) {
     var href = link.getAttribute('href');
-    if (href && href !== 'javascript:void(0);' && currentPath.includes(href.replace(/\//g, ''))) {
+    if (href && href.indexOf('javascript:') !== 0 && currentPath.endsWith(href)) {
       link.classList.add('active');
+
+      // 드롭다운 항목이면 상위 메뉴도 활성화
+      var navItem = link.closest('.nav-item');
+      var parentLink = navItem && navItem.querySelector('.nav-link');
+      if (link.classList.contains('dropdown-item') && parentLink) {
+        parentLink.classList.add('active');
+      }
     }
   });
 }

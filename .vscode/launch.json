@@ -8,7 +8,6 @@
     { "type": "chrome", "request": "launch", "name": "인허가현황 (certification.html)",   "file": "${workspaceFolder}/pages/certification.html" },
     { "type": "chrome", "request": "launch", "name": "사업분야 (project.html)",           "file": "${workspaceFolder}/pages/project.html" },
     { "type": "chrome", "request": "launch", "name": "실적현황 (records.html)",           "file": "${workspaceFolder}/pages/records.html" },
-    { "type": "chrome", "request": "launch", "name": "실적현황 구버전 (performance.html)", "file": "${workspaceFolder}/pages/performance.html" },
     { "type": "chrome", "request": "launch", "name": "오시는길 (contact.html)",           "file": "${workspaceFolder}/pages/contact.html" },
     { "type": "chrome", "request": "launch", "name": "고객문의 (board.html)",             "file": "${workspaceFolder}/pages/board.html" }
   ]
