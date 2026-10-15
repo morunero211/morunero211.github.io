@@ -18,16 +18,7 @@
  * 사용 대상: pages/contact.html
  * ======================================================== */
 
-.page-hero {
-  padding: 70px 0 30px !important;
-  min-height: 165px !important;
-}
 
-.page-hero-bg-text { 
-  font-size: 6rem; 
-  color: rgba(0,0,0,0.05);
-  padding: 50px;
-}
 
 
 
@@ -49,8 +40,6 @@
   border: 1px solid #dee2e6;
 }
 @media (max-width: 768px) { 
-  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
-  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
   .blog-cols-wrapper { padding: 30px 0 40px; }
   .widget-contact { margin-bottom: 30px; }
   .widget-contact h4 { font-size: 1.1rem; margin-bottom: 12px; }
@@ -59,8 +48,6 @@
 }
 
 @media (max-width: 480px) {
-  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
-  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
   .blog-cols-wrapper { padding: 20px 0 30px; }
   .widget-contact { margin-bottom: 25px; }
   .widget-contact h4 { font-size: 0.95rem; margin-bottom: 10px; }
