@@ -230,8 +230,7 @@
   }
 }
 
-/* ===== Partners ===== */
-.partners-section { background: #fafafa; padding: 70px 0; }
+/* ===== 섹션 제목 (협력업체 섹션 본문은 common.css) ===== */
 .section-heading { text-align: center; margin-bottom: 40px; }
 .section-heading h2 {
   font-family: 'Noto Sans KR', 'Malgun Gothic', Dotum, sans-serif;
@@ -239,26 +238,15 @@
   color: #1e2d3d; margin-bottom: 8px;
 }
 .section-heading p { color: #888; font-size: 13px; }
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
 
 @media (max-width: 768px) {
-  .partners-section { padding: 50px 0; }
   .section-heading { margin-bottom: 30px; }
   .section-heading h2 { margin-bottom: 6px; }
-  .partners-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
 }
 
 @media (max-width: 480px) {
-  .partners-section { padding: 30px 0; }
   .section-heading { margin-bottom: 20px; }
   .section-heading p { font-size: 11px; }
-  .partners-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 
 @media (max-width: 768px) { .quicklinks-grid { grid-template-columns: 1fr 1fr; } }
@@ -326,40 +314,6 @@
 .hexagon-content p {
   font-size: 0.8rem; line-height: 1.5; color: rgb(255, 255, 255);
 }
-
-.partners-image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.partner-logo {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  min-height: 70px;
-}
-
-.partner-logo:hover {
-  border-color: var(--color-point1);
-  box-shadow: 0 2px 8px rgba(107, 157, 138, 0.15);
-}
-
-.partner-logo img {
-  max-height: 80px;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
 
 @media (max-width: 1024px) {
   .hexagon-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }

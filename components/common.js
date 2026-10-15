@@ -78,6 +78,30 @@ var FOOTER = `
 </div>
 `;
 
+// ===== 주요 협력업체 및 거래처 =====
+// 로고 순서 = 화면 표시 순서. 추가/삭제는 이 목록만 수정
+var PARTNER_LOGOS = [
+  'relate_09.jpg', 'relate_13.jpg', 'relate_08.jpg', 'relate_22.jpg', 'relate_22_1.jpg',
+  'relate_24.jpg', 'relate_30.jpg', 'relate_15.jpg', 'relate_10.jpg', 'relate_01.jpg',
+  'relate_04.jpg', 'relate_26.jpg', 'relate_27.jpg'
+];
+
+var PARTNERS = `
+<section class="partners-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>주요 협력업체 및 거래처</h2>
+      <p>국내 주요 대기업 및 공공기관과 함께하고 있습니다.</p>
+    </div>
+    <div class="partners-image-grid">
+      ${PARTNER_LOGOS.map(function(file) {
+        return '<div class="partner-logo"><img src="../images/company_logo/' + file + '" alt="협력업체"></div>';
+      }).join('\n      ')}
+    </div>
+  </div>
+</section>
+`;
+
 // ===== 메인 주입 함수 =====
 function inject() {
   // 1. Navbar 삽입 (body 맨 앞)
@@ -90,7 +114,13 @@ function inject() {
   footerWrapper.innerHTML = FOOTER;
   document.body.appendChild(footerWrapper.children[0]);
 
-  // 3. 메뉴 액티브 상태 설정
+  // 3. 협력업체 섹션 삽입 (<div id="partners"></div>가 있는 페이지만)
+  var partnersSlot = document.getElementById('partners');
+  if (partnersSlot) {
+    partnersSlot.outerHTML = PARTNERS;
+  }
+
+  // 4. 메뉴 액티브 상태 설정
   setActiveMenu();
 }
 
