@@ -62,23 +62,16 @@ var FOOTER = `
     <div class="footer-row">
       <div class="footer-col">
         <h4>회사명</h4>
-        <p>조이산업</p>
-        <p>대표: 이상협</p>
+        <p>조이산업 | 대표: 박종남</p>
       </div>
       <div class="footer-col">
         <h4>주소</h4>
-        <p>서울시 강남구 테헤란로 123</p>
-        <p>우 06000</p>
+        <p>울산광역시 울주군 청량읍 화창1길 42-18</p>
       </div>
       <div class="footer-col">
         <h4>연락처</h4>
-        <p>Tel: (02) 1234-5678</p>
-        <p>Fax: (02) 1234-5679</p>
-      </div>
-      <div class="footer-col">
-        <h4>개인정보처리방침</h4>
-        <p><a href="javascript:void(0)" class="legal">개인정보 수집 및 이용</a></p>
-        <p><a href="javascript:void(0)" class="legal">서비스 이용약관</a></p>
+        <p>Tel: 052-249-9199</p>
+        <p>Fax: 052-249-9250</p>
       </div>
     </div>
   </div>
