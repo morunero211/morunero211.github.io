@@ -52,13 +52,11 @@ function updateDropdownOptions() {
   const filterSelect = document.getElementById('company-filter');
   if (!filterSelect) return;
   
-  // 기존 옵션 유지 (전체 기업)
-  const existingOptions = filterSelect.innerHTML;
-  
-  companiesData.forEach(company => {
+  // HTML에는 "전체 기업"만 두고, 기업 목록은 JSON 순서대로 번호를 붙여 추가
+  companiesData.forEach((company, index) => {
     const option = document.createElement('option');
     option.value = company.id;
-    option.textContent = company.name;
+    option.textContent = `${index + 1}. ${company.name}`;
     filterSelect.appendChild(option);
   });
 }

@@ -1,385 +1,378 @@
 {
   "companies": [
     {
-      "id": "nav_01",
-      "name": "한화임팩트(주)",
+      "id": "nav_06",
+      "name": "무림피앤피(주)",
       "records": [
         {
           "no": 1,
           "period": "2021~2026",
-          "content": "공조설비 및 냉난방기 년간 유지 보수 작업"
+          "content": "공조설비 및 냉난설비 유지 보수 작업(단가 작업 수행중)"
         },
         {
           "no": 2,
-          "period": "2022.06.17",
-          "content": "냉방기 점검 및 활성탄 교체공사"
+          "period": "2026.07.31",
+          "content": "외)초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
         },
         {
           "no": 3,
-          "period": "2021.12",
-          "content": "전공장 공조설비 점검 및 난방전환 공사"
+          "period": "2026.07.31",
+          "content": "SAU 노후 교체 공사(180R/T x 1대)"
         },
         {
           "no": 4,
-          "period": "2021.02.19",
-          "content": "2공장 CCR 공조설비 개선공사(20R/T x 2)"
+          "period": "2025.09.30",
+          "content": "제지 2층 Cooling Air공급 Fan 및 덕트공사"
         },
         {
           "no": 5,
-          "period": "2021.02",
-          "content": "2공장 CCR 공조설비 개선공사"
+          "period": "2025.08.31",
+          "content": "중간롤 창고 & 완정공정 공조용 냉동기 Overhaul"
         },
         {
           "no": 6,
-          "period": "2020.12",
-          "content": "2공장 CCR 공조설비 개선공사 "
+          "period": "2025.07.31",
+          "content": "제지공장 SAU(#7) 노후교체(180R/T)"
         },
         {
           "no": 7,
-          "period": "2020.12",
-          "content": "난방기 난방전환 및 점검공사"
+          "period": "2025.05.31",
+          "content": "초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
         },
         {
           "no": 8,
-          "period": "2020.08",
-          "content": "전공장 냉방기 점검 및 보수공사"
+          "period": "2025.03.31",
+          "content": "외)코타공정용 Screw Chiller Overhaul(50R/T x 4대)"
         },
         {
           "no": 9,
-          "period": "2019.07",
-          "content": "CCR 2층 공조설비 교체작업"
+          "period": "2024.08.31",
+          "content": "건조 운전실 유해가스제거 공조기 설치"
         },
         {
           "no": 10,
-          "period": "2019.07",
-          "content": "19년도 상반기 냉방기 점검 및 냉방전환공사"
+          "period": "2024.08.31",
+          "content": "중간롤창고 항온항습용 Screw Chiller Overhaul(50HP x 4대)"
         },
         {
           "no": 11,
-          "period": "2019.06",
-          "content": "사원목욕탕 공조설비 교체공사"
+          "period": "2024.06.30",
+          "content": "건조&증해공정 냉동기칠러 Overhaul(50R/T x 4대)"
         },
         {
           "no": 12,
-          "period": "2019.03",
-          "content": "복지관2층 공조설비 보수작업(증발기) - 40R/T"
+          "period": "2024.06.30",
+          "content": "시설)제지공장 SAU 8번 노후 교체 공사(180 x 1대)"
         },
         {
           "no": 13,
-          "period": "2019.01",
-          "content": "공조설비 및 에어컨 보수공사"
+          "period": "2023.12.31",
+          "content": "C-프로젝트 냉동기 구입설치(120R/T)"
         },
         {
           "no": 14,
-          "period": "2018.06",
-          "content": "전공장 공조설비 점검 및 에어컨 보수작업"
+          "period": "2023.12.31",
+          "content": "초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
         },
         {
           "no": 15,
-          "period": "2018.05",
-          "content": "CCR 1층 공조설비 교체작업"
+          "period": "2023.09.30",
+          "content": "중간롤창고 항온항습용 Screw Chiller Overhaul(50HP x 4대)"
         },
         {
           "no": 16,
-          "period": "2018.02",
-          "content": "CCR 2층 공조설비 Steam coil 교체작업"
+          "period": "2023.08.31",
+          "content": "제지공장 SAU 6번 노후 교체작업(180R/T x 1대)"
         },
         {
           "no": 17,
-          "period": "2017.12",
-          "content": "하반기 공조 설비 점검 및 CCR 덕트 청소 도급 공사"
+          "period": "2023.06.30",
+          "content": "건조,증해 냉동기칠러 보수(50HP x 4대)"
         },
         {
           "no": 18,
-          "period": "2017.10",
-          "content": "냉동기 효율화 에어컨 교체공사"
+          "period": "2023.05.17",
+          "content": "본관 2층 시스템(천정형)에어컨 교체"
         },
         {
           "no": 19,
-          "period": "2017.06",
-          "content": "전공장 냉방기 보수공사(26개소)"
+          "period": "2023.05.17",
+          "content": "펄프 통합사무실 2층 시스템(천정형)에어컨 교체"
         },
         {
           "no": 20,
-          "period": "2017.05",
-          "content": "출하사무실 제품포장실 공조 설비 교체 공사"
+          "period": "2023.02.28",
+          "content": "중간롤 창고 항온항습 냉동기 유니트 응축기 교체(50R/T x 4대)"
         },
         {
           "no": 21,
-          "period": "2017.04",
-          "content": "Chiller 압축기 Overhaul 작업(13공장)"
+          "period": "2023.01.31",
+          "content": "펄프공장 분석실 및 실험실 국소배기장치"
         },
         {
           "no": 22,
-          "period": "2015.12",
-          "content": "2공장 MCC Room 양압설비공사"
+          "period": "2022.09.30",
+          "content": "완정공정 공조기용 Screw Chiller Overhaul(200R/T x 4대)"
         },
         {
           "no": 23,
-          "period": "2014.07",
-          "content": "공랭식150R/T_복지관 본관동 냉동기 교체 공사"
+          "period": "2022.08.31",
+          "content": "제지공장 SAU 3, 4번 노후 교체공사(180R/T x 2대)"
         },
         {
           "no": 24,
-          "period": "2014.06",
-          "content": "CCR 1,2층 및 MCC ROOM 공조설비 개선작업"
+          "period": "2022.08.31",
+          "content": "코타공정 Screw Chiller Overhaul(50R/T x 4대)"
         },
         {
           "no": 25,
-          "period": "2013.05",
-          "content": "냉․난방 및 공조 설비 보수 공사"
+          "period": "2022.05.31",
+          "content": "중간롤창고 항온항습 Screw Chiller Overhaul(50HP x 4대)"
         },
         {
           "no": 26,
-          "period": "2012.11",
-          "content": "공조 설비 유지보수.실험실 후드 보완작업"
+          "period": "2022.04.30",
+          "content": "제지 옥상 SAU(#11,13,16)온수코일교체"
         },
         {
           "no": 27,
-          "period": "2011.06",
-          "content": "전공장_공조 설비 Duct Cleaning 공사"
+          "period": "2022.03.31",
+          "content": "건조,증해,정수공정 냉동기칠러 보수"
         },
         {
           "no": 28,
-          "period": "2002.03",
-          "content": "기존 P-A/C 방폭으로 개조"
+          "period": "2021.08.31",
+          "content": "초지공정냉동기칠러 및 SAU동절기대비보수"
         },
         {
           "no": 29,
-          "period": "1999.02",
-          "content": "NO.2_60R/T_방폭형CHILLER냉동기 납품 및 설치(D2G4)"
+          "period": "2021.08",
+          "content": "외)초지공정냉동기칠러및SAU동절기대비보수"
         },
         {
           "no": 30,
-          "period": "1998.08",
-          "content": "C/R 양압설비작업"
+          "period": "2021.06.30",
+          "content": "제지공장 SAU 2, 5번 노후 교체 공사(180R/T x 2대)"
         },
         {
           "no": 31,
-          "period": "1997.10",
-          "content": "활성탄 교체 작업"
+          "period": "2021.05.31",
+          "content": "외)중간롤창고및 완정공정 냉동기칠러 Overhaul 작업(50HP x 4대)"
         },
         {
           "no": 32,
-          "period": "1997.05",
-          "content": "본관복지관_공조설비 VAV SYSTEM으로 개선함"
+          "period": "2021.05",
+          "content": "외)중간롤창고 및 완정공정 냉동기 칠러 보수"
         },
         {
           "no": 33,
-          "period": "1995.06",
-          "content": "기술서비스팀_P-A/C 납품/설치 및 DUCT 설비 공사"
+          "period": "2021.04",
+          "content": "제지공장  SAU 2, 5번 노후 교체 공사"
         },
         {
           "no": 34,
-          "period": "1995.01",
-          "content": "NO.1.2 C/R_양압 설비공사(항온항습기, DUCT포함)"
+          "period": "2021.03.31",
+          "content": "외)#2건조,증해,정수공저 냉동기칠러 Overhaul 작업(50HP x 4대)"
         },
         {
           "no": 35,
-          "period": "1992.02",
-          "content": "NO.2 C/R B/D_30R/T 2대_C/R HVAC 설비 개보수 공사"
-        }
-      ]
-    },
-    {
-      "id": "nav_02",
-      "name": "한화케미칼(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "2016.09",
-          "content": "울산2공장A_ABR생산1팀 국소배기장치 설치 공사"
+          "period": "2021.03",
+          "content": "외)#2건조,증해,정수전기실용  냉동기칠러보수"
         },
         {
-          "no": 2,
-          "period": "2016.09",
-          "content": "울산2공장A_ABR생산1팀 공정실 양압설비 설치 공사"
+          "no": 36,
+          "period": "2021.02.28",
+          "content": "외)발전전기실용 터보냉동기 Overhaul 작업(150R/T)"
         },
         {
-          "no": 3,
-          "period": "2015.09",
-          "content": "SPVC공정 양압설비 HEPA Filter 설치"
+          "no": 37,
+          "period": "2021.02",
+          "content": "외)발전전기실용  터보냉동기 150R/T오버홀작업"
         },
         {
-          "no": 4,
-          "period": "2007.05",
-          "content": "MPS-1 공정개시제 냉동고 설치 공사"
+          "no": 38,
+          "period": "2020.04",
+          "content": "외)중간롤 창고 및 완정 공조용 냉동기 보수 작업"
         },
         {
-          "no": 5,
-          "period": "2007.04",
-          "content": "FAN COIL UNIT 방폭 제작설치 작업"
+          "no": 39,
+          "period": "2020.03",
+          "content": "제지공장 SAU 14~16, 1번 교체공사"
         },
         {
-          "no": 6,
-          "period": "2005.08",
-          "content": "PVC공정개시제 보관저온창고 설치 공사"
+          "no": 40,
+          "period": "2019.12",
+          "content": "유해화학물질 취급시설 개선 국소배기장치"
         },
         {
-          "no": 7,
-          "period": "2005.03",
-          "content": "MPS-2 냉동설비 설치 공사"
+          "no": 41,
+          "period": "2019.12",
+          "content": "시)증해공정유해가스제거공조기교체작업"
         },
         {
-          "no": 8,
-          "period": "2005.02",
-          "content": "PVC공정 보관창고 설치"
-        },
-        {
-          "no": 9,
-          "period": "2004.11",
-          "content": "SPVC 공정 C/R 양압설비"
-        },
-        {
-          "no": 10,
-          "period": "2004.05",
-          "content": "냉동기 수리 CLEAR TEST 및 시운전"
-        },
-        {
-          "no": 11,
-          "period": "2004.05",
-          "content": "냉동기 Overhaul 작업"
-        },
-        {
-          "no": 12,
-          "period": "2004.04",
-          "content": "2사업장 SPVC 공정 CONTROL/R 양압 설비 공사"
-        },
-        {
-          "no": 13,
-          "period": "1997.02",
-          "content": "FAN COIL UNIT 방폭 제작설치 작업"
-        }
-      ]
-    },
-    {
-      "id": "nav_03",
-      "name": "롯데이네오스화학(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "2022~2026",
-          "content": "전공장 HVAC 점검 및 수리 작업(단가 작업 수행중)"
-        },
-        {
-          "no": 2,
-          "period": "2026.07.20",
-          "content": "유해화학물질 실내보관시설 강제배출설비 설치 공사"
-        },
-        {
-          "no": 3,
-          "period": "2026.05.26",
-          "content": "방폭형 AHU(AA Analyzer house용 공조기) 교체"
-        },
-        {
-          "no": 4,
-          "period": "2024.06.27",
-          "content": "CCR 냉동기 Overhaul 작업(스트류 냉동기 50HP) / 매년 2기"
-        },
-        {
-          "no": 5,
-          "period": "2024.02.26",
-          "content": "폐수처리장 환기 설비"
-        },
-        {
-          "no": 6,
-          "period": "2022.04.21",
-          "content": "본관동 HVAC 제어용(인버터) 판넬 교체(공조설비 100R/T)"
-        },
-        {
-          "no": 7,
-          "period": "2021.12",
-          "content": "HVAC 점검 및 수리작업"
-        },
-        {
-          "no": 8,
-          "period": "2019.07",
-          "content": "CCR 2층 공조설비 교체작업(100RK × 2set)"
-        },
-        {
-          "no": 9,
+          "no": 42,
           "period": "2019.06",
-          "content": "사원목욕탕 공조설비 교체공사"
+          "content": "외)중간롤창고및완정공조기용냉동기보수"
         },
         {
-          "no": 10,
-          "period": "2017.06",
-          "content": "No2CO 분석기실 공조설비 교체"
+          "no": 43,
+          "period": "2019.03",
+          "content": "초지공정용 Chiller 보수작업 외"
         },
         {
-          "no": 11,
-          "period": "2016.06",
-          "content": "본관_분석기실 공조설비 일체(자재 및 공사)"
+          "no": 44,
+          "period": "2018.10",
+          "content": "중간창고 PC이설, 옥상냉동압축기 수리"
         },
         {
-          "no": 12,
-          "period": "2015.04",
-          "content": "CCR 냉동기 스크류 TYPE 개선 교체(2SET)"
+          "no": 45,
+          "period": "2018.06",
+          "content": "조성조제 전분장 집진기 설치 냉난방기 공사"
         },
         {
-          "no": 13,
-          "period": "2014.12",
-          "content": "Anaiyzer House AHU 교체공사"
+          "no": 46,
+          "period": "2018.06",
+          "content": "외)중간롤 창고 및 완전공정 냉동기 보수작업"
         },
         {
-          "no": 14,
+          "no": 47,
+          "period": "2018.02",
+          "content": "외)펄프증해 2공장 건조정수 냉동기 보수작업"
+        },
+        {
+          "no": 48,
+          "period": "2018.01",
+          "content": "펄프_Mill Office 실험실 국소배기장치설치"
+        },
+        {
+          "no": 49,
+          "period": "2017.05",
+          "content": "외)#1,2 R/B 유해가스제거공조기 보수작업 외"
+        },
+        {
+          "no": 50,
+          "period": "2017.02",
+          "content": "외)펄프증해, 건조, 정수 냉동기 보수작업"
+        },
+        {
+          "no": 51,
+          "period": "2017.02",
+          "content": "외)코타공정용 #2-1호기SCREW냉동기"
+        },
+        {
+          "no": 52,
+          "period": "2016.11",
+          "content": "시)조약공정 운전실/분석실 유해가스제거공사"
+        },
+        {
+          "no": 53,
+          "period": "2016.09",
+          "content": "외)중간롤 창고 냉동기 #1호기*2대 보수작업"
+        },
+        {
+          "no": 54,
+          "period": "2016.08",
+          "content": "외)코타공정용 #2-2호기 냉동기칠러 오버홀"
+        },
+        {
+          "no": 55,
+          "period": "2016.08",
+          "content": "1표백공정운전실/분석실 Supply Air Unit"
+        },
+        {
+          "no": 56,
+          "period": "2016.04",
+          "content": "SILO_외)중간롤 창고 항온항습기 Screw냉동기보수"
+        },
+        {
+          "no": 57,
+          "period": "2016.03",
+          "content": "펄프,증해,건조,정수 전기실용 냉동기 보수작업"
+        },
+        {
+          "no": 58,
+          "period": "2015.07",
+          "content": "외)2공장 건조 전기실용 냉동기 응축기교체"
+        },
+        {
+          "no": 59,
+          "period": "2015.02",
+          "content": "품질보증1파트 실험실 환기설비보수"
+        },
+        {
+          "no": 60,
+          "period": "2015.02",
+          "content": "증해및건조,정수 전기실용냉동기보수"
+        },
+        {
+          "no": 61,
           "period": "2014.08",
-          "content": "아세아아세틸스_50HP_CCR 냉동기 Compressor Overhaul 공사"
+          "content": "150R/T_중간롤 창고 항온항습기용 냉동기 Overhaul"
         },
         {
-          "no": 15,
-          "period": "2014.03",
-          "content": "전공장 공조 설비 유지 보수 작업"
+          "no": 62,
+          "period": "2014.06",
+          "content": "COATER 공정용 Screw 냉동기 Overhaul..."
         },
         {
-          "no": 16,
+          "no": 63,
+          "period": "2014.06",
+          "content": "#1 R/B 유해가스제거 공조기 보수작업"
+        },
+        {
+          "no": 64,
           "period": "2013.03",
-          "content": "HVAC 공조 설비 및 덕트 공사"
+          "content": "정수공정 냉동기 정비 작업외 공사"
         },
         {
-          "no": 17,
-          "period": "2012.12",
-          "content": "본관 냉난방 시스템 개선 공사"
+          "no": 65,
+          "period": "2006.06",
+          "content": "냉동기 응축기 교체공사"
         },
         {
-          "no": 18,
-          "period": "2012.11",
-          "content": "HVAC 점검 단가 계약"
+          "no": 66,
+          "period": "2006.05",
+          "content": "발전 전기실 냉동기 설치공사"
         },
         {
-          "no": 19,
-          "period": "2012.06",
-          "content": "DCS ROOM DUCT 공사"
+          "no": 67,
+          "period": "2006.02",
+          "content": "냉동기 80HP 교체작업"
         },
         {
-          "no": 20,
-          "period": "2011.04",
-          "content": "200R/T_HVAC 설비 교체"
+          "no": 68,
+          "period": "2000.10",
+          "content": "1공장 증해운전실_환기시설 개선작업"
         },
         {
-          "no": 21,
-          "period": "2005.10",
-          "content": "CCR 양압관련 DUCT 확장작업"
+          "no": 69,
+          "period": "2000.09",
+          "content": "2공장_양압설비 공사"
         },
         {
-          "no": 22,
-          "period": "2004.11",
-          "content": "STEAM COIL 교체공사"
+          "no": 70,
+          "period": "1996.06",
+          "content": "펄프과_100R/T 1대_냉동기 COMPRESSOR Overhaul 공사"
         },
         {
-          "no": 23,
-          "period": "2002.12",
-          "content": "본관․식당 DUCT CLEANING 공사"
+          "no": 71,
+          "period": "1996.06",
+          "content": "전공장_GAS FILTER UNIT MEDIA 교체 공사"
         },
         {
-          "no": 24,
-          "period": "2002.11",
-          "content": "HVAC 노후설비 교체"
+          "no": 72,
+          "period": "1996.06",
+          "content": "펄프과_120R/T 1대_COOLING TOWER 교체 공사"
         },
         {
-          "no": 25,
-          "period": "2001.04",
-          "content": "CCR 냉동기 교체 및 공조설비 보수 공사"
+          "no": 73,
+          "period": "1995.05",
+          "content": "1공장 R/B_양압 및 공조설비(DUCT, 배관설비 포함)"
+        },
+        {
+          "no": 74,
+          "period": "1992.05",
+          "content": "2공장 확장공사_냉동기 외_공조설비 공사 (DUCT, 배관설비 포함)"
         }
       ]
     },
@@ -1055,6 +1048,415 @@
       ]
     },
     {
+      "id": "nav_03",
+      "name": "롯데이네오스화학(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "2022~2026",
+          "content": "전공장 HVAC 점검 및 수리 작업(단가 작업 수행중)"
+        },
+        {
+          "no": 2,
+          "period": "2026.07.20",
+          "content": "유해화학물질 실내보관시설 강제배출설비 설치 공사"
+        },
+        {
+          "no": 3,
+          "period": "2026.05.26",
+          "content": "방폭형 AHU(AA Analyzer house용 공조기) 교체"
+        },
+        {
+          "no": 4,
+          "period": "2024.06.27",
+          "content": "CCR 냉동기 Overhaul 작업(스트류 냉동기 50HP) / 매년 2기"
+        },
+        {
+          "no": 5,
+          "period": "2024.02.26",
+          "content": "폐수처리장 환기 설비"
+        },
+        {
+          "no": 6,
+          "period": "2022.04.21",
+          "content": "본관동 HVAC 제어용(인버터) 판넬 교체(공조설비 100R/T)"
+        },
+        {
+          "no": 7,
+          "period": "2021.12",
+          "content": "HVAC 점검 및 수리작업"
+        },
+        {
+          "no": 8,
+          "period": "2019.07",
+          "content": "CCR 2층 공조설비 교체작업(100RK × 2set)"
+        },
+        {
+          "no": 9,
+          "period": "2019.06",
+          "content": "사원목욕탕 공조설비 교체공사"
+        },
+        {
+          "no": 10,
+          "period": "2017.06",
+          "content": "No2CO 분석기실 공조설비 교체"
+        },
+        {
+          "no": 11,
+          "period": "2016.06",
+          "content": "본관_분석기실 공조설비 일체(자재 및 공사)"
+        },
+        {
+          "no": 12,
+          "period": "2015.04",
+          "content": "CCR 냉동기 스크류 TYPE 개선 교체(2SET)"
+        },
+        {
+          "no": 13,
+          "period": "2014.12",
+          "content": "Anaiyzer House AHU 교체공사"
+        },
+        {
+          "no": 14,
+          "period": "2014.08",
+          "content": "아세아아세틸스_50HP_CCR 냉동기 Compressor Overhaul 공사"
+        },
+        {
+          "no": 15,
+          "period": "2014.03",
+          "content": "전공장 공조 설비 유지 보수 작업"
+        },
+        {
+          "no": 16,
+          "period": "2013.03",
+          "content": "HVAC 공조 설비 및 덕트 공사"
+        },
+        {
+          "no": 17,
+          "period": "2012.12",
+          "content": "본관 냉난방 시스템 개선 공사"
+        },
+        {
+          "no": 18,
+          "period": "2012.11",
+          "content": "HVAC 점검 단가 계약"
+        },
+        {
+          "no": 19,
+          "period": "2012.06",
+          "content": "DCS ROOM DUCT 공사"
+        },
+        {
+          "no": 20,
+          "period": "2011.04",
+          "content": "200R/T_HVAC 설비 교체"
+        },
+        {
+          "no": 21,
+          "period": "2005.10",
+          "content": "CCR 양압관련 DUCT 확장작업"
+        },
+        {
+          "no": 22,
+          "period": "2004.11",
+          "content": "STEAM COIL 교체공사"
+        },
+        {
+          "no": 23,
+          "period": "2002.12",
+          "content": "본관․식당 DUCT CLEANING 공사"
+        },
+        {
+          "no": 24,
+          "period": "2002.11",
+          "content": "HVAC 노후설비 교체"
+        },
+        {
+          "no": 25,
+          "period": "2001.04",
+          "content": "CCR 냉동기 교체 및 공조설비 보수 공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_01",
+      "name": "한화임팩트(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "2021~2026",
+          "content": "공조설비 및 냉난방기 년간 유지 보수 작업"
+        },
+        {
+          "no": 2,
+          "period": "2022.06.17",
+          "content": "냉방기 점검 및 활성탄 교체공사"
+        },
+        {
+          "no": 3,
+          "period": "2021.12",
+          "content": "전공장 공조설비 점검 및 난방전환 공사"
+        },
+        {
+          "no": 4,
+          "period": "2021.02.19",
+          "content": "2공장 CCR 공조설비 개선공사(20R/T x 2)"
+        },
+        {
+          "no": 5,
+          "period": "2021.02",
+          "content": "2공장 CCR 공조설비 개선공사"
+        },
+        {
+          "no": 6,
+          "period": "2020.12",
+          "content": "2공장 CCR 공조설비 개선공사 "
+        },
+        {
+          "no": 7,
+          "period": "2020.12",
+          "content": "난방기 난방전환 및 점검공사"
+        },
+        {
+          "no": 8,
+          "period": "2020.08",
+          "content": "전공장 냉방기 점검 및 보수공사"
+        },
+        {
+          "no": 9,
+          "period": "2019.07",
+          "content": "CCR 2층 공조설비 교체작업"
+        },
+        {
+          "no": 10,
+          "period": "2019.07",
+          "content": "19년도 상반기 냉방기 점검 및 냉방전환공사"
+        },
+        {
+          "no": 11,
+          "period": "2019.06",
+          "content": "사원목욕탕 공조설비 교체공사"
+        },
+        {
+          "no": 12,
+          "period": "2019.03",
+          "content": "복지관2층 공조설비 보수작업(증발기) - 40R/T"
+        },
+        {
+          "no": 13,
+          "period": "2019.01",
+          "content": "공조설비 및 에어컨 보수공사"
+        },
+        {
+          "no": 14,
+          "period": "2018.06",
+          "content": "전공장 공조설비 점검 및 에어컨 보수작업"
+        },
+        {
+          "no": 15,
+          "period": "2018.05",
+          "content": "CCR 1층 공조설비 교체작업"
+        },
+        {
+          "no": 16,
+          "period": "2018.02",
+          "content": "CCR 2층 공조설비 Steam coil 교체작업"
+        },
+        {
+          "no": 17,
+          "period": "2017.12",
+          "content": "하반기 공조 설비 점검 및 CCR 덕트 청소 도급 공사"
+        },
+        {
+          "no": 18,
+          "period": "2017.10",
+          "content": "냉동기 효율화 에어컨 교체공사"
+        },
+        {
+          "no": 19,
+          "period": "2017.06",
+          "content": "전공장 냉방기 보수공사(26개소)"
+        },
+        {
+          "no": 20,
+          "period": "2017.05",
+          "content": "출하사무실 제품포장실 공조 설비 교체 공사"
+        },
+        {
+          "no": 21,
+          "period": "2017.04",
+          "content": "Chiller 압축기 Overhaul 작업(13공장)"
+        },
+        {
+          "no": 22,
+          "period": "2015.12",
+          "content": "2공장 MCC Room 양압설비공사"
+        },
+        {
+          "no": 23,
+          "period": "2014.07",
+          "content": "공랭식150R/T_복지관 본관동 냉동기 교체 공사"
+        },
+        {
+          "no": 24,
+          "period": "2014.06",
+          "content": "CCR 1,2층 및 MCC ROOM 공조설비 개선작업"
+        },
+        {
+          "no": 25,
+          "period": "2013.05",
+          "content": "냉․난방 및 공조 설비 보수 공사"
+        },
+        {
+          "no": 26,
+          "period": "2012.11",
+          "content": "공조 설비 유지보수.실험실 후드 보완작업"
+        },
+        {
+          "no": 27,
+          "period": "2011.06",
+          "content": "전공장_공조 설비 Duct Cleaning 공사"
+        },
+        {
+          "no": 28,
+          "period": "2002.03",
+          "content": "기존 P-A/C 방폭으로 개조"
+        },
+        {
+          "no": 29,
+          "period": "1999.02",
+          "content": "NO.2_60R/T_방폭형CHILLER냉동기 납품 및 설치(D2G4)"
+        },
+        {
+          "no": 30,
+          "period": "1998.08",
+          "content": "C/R 양압설비작업"
+        },
+        {
+          "no": 31,
+          "period": "1997.10",
+          "content": "활성탄 교체 작업"
+        },
+        {
+          "no": 32,
+          "period": "1997.05",
+          "content": "본관복지관_공조설비 VAV SYSTEM으로 개선함"
+        },
+        {
+          "no": 33,
+          "period": "1995.06",
+          "content": "기술서비스팀_P-A/C 납품/설치 및 DUCT 설비 공사"
+        },
+        {
+          "no": 34,
+          "period": "1995.01",
+          "content": "NO.1.2 C/R_양압 설비공사(항온항습기, DUCT포함)"
+        },
+        {
+          "no": 35,
+          "period": "1992.02",
+          "content": "NO.2 C/R B/D_30R/T 2대_C/R HVAC 설비 개보수 공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_08",
+      "name": "S-OIL(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "2019.07",
+          "content": "제품운영2과 4계절용 스탠드"
+        },
+        {
+          "no": 2,
+          "period": "2016.10",
+          "content": "TMS Room 방폭에어컨 외"
+        },
+        {
+          "no": 3,
+          "period": "2003.07",
+          "content": "C/T 보수 작업"
+        },
+        {
+          "no": 4,
+          "period": "1996.07",
+          "content": "30R/T_MCC ROOM 양압 공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_02",
+      "name": "한화케미칼(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "2016.09",
+          "content": "울산2공장A_ABR생산1팀 국소배기장치 설치 공사"
+        },
+        {
+          "no": 2,
+          "period": "2016.09",
+          "content": "울산2공장A_ABR생산1팀 공정실 양압설비 설치 공사"
+        },
+        {
+          "no": 3,
+          "period": "2015.09",
+          "content": "SPVC공정 양압설비 HEPA Filter 설치"
+        },
+        {
+          "no": 4,
+          "period": "2007.05",
+          "content": "MPS-1 공정개시제 냉동고 설치 공사"
+        },
+        {
+          "no": 5,
+          "period": "2007.04",
+          "content": "FAN COIL UNIT 방폭 제작설치 작업"
+        },
+        {
+          "no": 6,
+          "period": "2005.08",
+          "content": "PVC공정개시제 보관저온창고 설치 공사"
+        },
+        {
+          "no": 7,
+          "period": "2005.03",
+          "content": "MPS-2 냉동설비 설치 공사"
+        },
+        {
+          "no": 8,
+          "period": "2005.02",
+          "content": "PVC공정 보관창고 설치"
+        },
+        {
+          "no": 9,
+          "period": "2004.11",
+          "content": "SPVC 공정 C/R 양압설비"
+        },
+        {
+          "no": 10,
+          "period": "2004.05",
+          "content": "냉동기 수리 CLEAR TEST 및 시운전"
+        },
+        {
+          "no": 11,
+          "period": "2004.05",
+          "content": "냉동기 Overhaul 작업"
+        },
+        {
+          "no": 12,
+          "period": "2004.04",
+          "content": "2사업장 SPVC 공정 CONTROL/R 양압 설비 공사"
+        },
+        {
+          "no": 13,
+          "period": "1997.02",
+          "content": "FAN COIL UNIT 방폭 제작설치 작업"
+        }
+      ]
+    },
+    {
       "id": "nav_05",
       "name": "(주)삼양제넥스",
       "records": [
@@ -1087,501 +1489,6 @@
           "no": 6,
           "period": "2012.05",
           "content": "PD 생산능력 냉동수 제조설비 제작"
-        }
-      ]
-    },
-    {
-      "id": "nav_06",
-      "name": "무림피앤피(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "2021~2026",
-          "content": "공조설비 및 냉난설비 유지 보수 작업(단가 작업 수행중)"
-        },
-        {
-          "no": 2,
-          "period": "2026.07.31",
-          "content": "외)초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
-        },
-        {
-          "no": 3,
-          "period": "2026.07.31",
-          "content": "SAU 노후 교체 공사(180R/T x 1대)"
-        },
-        {
-          "no": 4,
-          "period": "2025.09.30",
-          "content": "제지 2층 Cooling Air공급 Fan 및 덕트공사"
-        },
-        {
-          "no": 5,
-          "period": "2025.08.31",
-          "content": "중간롤 창고 & 완정공정 공조용 냉동기 Overhaul"
-        },
-        {
-          "no": 6,
-          "period": "2025.07.31",
-          "content": "제지공장 SAU(#7) 노후교체(180R/T)"
-        },
-        {
-          "no": 7,
-          "period": "2025.05.31",
-          "content": "초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
-        },
-        {
-          "no": 8,
-          "period": "2025.03.31",
-          "content": "외)코타공정용 Screw Chiller Overhaul(50R/T x 4대)"
-        },
-        {
-          "no": 9,
-          "period": "2024.08.31",
-          "content": "건조 운전실 유해가스제거 공조기 설치"
-        },
-        {
-          "no": 10,
-          "period": "2024.08.31",
-          "content": "중간롤창고 항온항습용 Screw Chiller Overhaul(50HP x 4대)"
-        },
-        {
-          "no": 11,
-          "period": "2024.06.30",
-          "content": "건조&증해공정 냉동기칠러 Overhaul(50R/T x 4대)"
-        },
-        {
-          "no": 12,
-          "period": "2024.06.30",
-          "content": "시설)제지공장 SAU 8번 노후 교체 공사(180 x 1대)"
-        },
-        {
-          "no": 13,
-          "period": "2023.12.31",
-          "content": "C-프로젝트 냉동기 구입설치(120R/T)"
-        },
-        {
-          "no": 14,
-          "period": "2023.12.31",
-          "content": "초지공정용 Screw Chiller Overhaul(50R/T x 2대)"
-        },
-        {
-          "no": 15,
-          "period": "2023.09.30",
-          "content": "중간롤창고 항온항습용 Screw Chiller Overhaul(50HP x 4대)"
-        },
-        {
-          "no": 16,
-          "period": "2023.08.31",
-          "content": "제지공장 SAU 6번 노후 교체작업(180R/T x 1대)"
-        },
-        {
-          "no": 17,
-          "period": "2023.06.30",
-          "content": "건조,증해 냉동기칠러 보수(50HP x 4대)"
-        },
-        {
-          "no": 18,
-          "period": "2023.05.17",
-          "content": "본관 2층 시스템(천정형)에어컨 교체"
-        },
-        {
-          "no": 19,
-          "period": "2023.05.17",
-          "content": "펄프 통합사무실 2층 시스템(천정형)에어컨 교체"
-        },
-        {
-          "no": 20,
-          "period": "2023.02.28",
-          "content": "중간롤 창고 항온항습 냉동기 유니트 응축기 교체(50R/T x 4대)"
-        },
-        {
-          "no": 21,
-          "period": "2023.01.31",
-          "content": "펄프공장 분석실 및 실험실 국소배기장치"
-        },
-        {
-          "no": 22,
-          "period": "2022.09.30",
-          "content": "완정공정 공조기용 Screw Chiller Overhaul(200R/T x 4대)"
-        },
-        {
-          "no": 23,
-          "period": "2022.08.31",
-          "content": "제지공장 SAU 3, 4번 노후 교체공사(180R/T x 2대)"
-        },
-        {
-          "no": 24,
-          "period": "2022.08.31",
-          "content": "코타공정 Screw Chiller Overhaul(50R/T x 4대)"
-        },
-        {
-          "no": 25,
-          "period": "2022.05.31",
-          "content": "중간롤창고 항온항습 Screw Chiller Overhaul(50HP x 4대)"
-        },
-        {
-          "no": 26,
-          "period": "2022.04.30",
-          "content": "제지 옥상 SAU(#11,13,16)온수코일교체"
-        },
-        {
-          "no": 27,
-          "period": "2022.03.31",
-          "content": "건조,증해,정수공정 냉동기칠러 보수"
-        },
-        {
-          "no": 28,
-          "period": "2021.08.31",
-          "content": "초지공정냉동기칠러 및 SAU동절기대비보수"
-        },
-        {
-          "no": 29,
-          "period": "2021.08",
-          "content": "외)초지공정냉동기칠러및SAU동절기대비보수"
-        },
-        {
-          "no": 30,
-          "period": "2021.06.30",
-          "content": "제지공장 SAU 2, 5번 노후 교체 공사(180R/T x 2대)"
-        },
-        {
-          "no": 31,
-          "period": "2021.05.31",
-          "content": "외)중간롤창고및 완정공정 냉동기칠러 Overhaul 작업(50HP x 4대)"
-        },
-        {
-          "no": 32,
-          "period": "2021.05",
-          "content": "외)중간롤창고 및 완정공정 냉동기 칠러 보수"
-        },
-        {
-          "no": 33,
-          "period": "2021.04",
-          "content": "제지공장  SAU 2, 5번 노후 교체 공사"
-        },
-        {
-          "no": 34,
-          "period": "2021.03.31",
-          "content": "외)#2건조,증해,정수공저 냉동기칠러 Overhaul 작업(50HP x 4대)"
-        },
-        {
-          "no": 35,
-          "period": "2021.03",
-          "content": "외)#2건조,증해,정수전기실용  냉동기칠러보수"
-        },
-        {
-          "no": 36,
-          "period": "2021.02.28",
-          "content": "외)발전전기실용 터보냉동기 Overhaul 작업(150R/T)"
-        },
-        {
-          "no": 37,
-          "period": "2021.02",
-          "content": "외)발전전기실용  터보냉동기 150R/T오버홀작업"
-        },
-        {
-          "no": 38,
-          "period": "2020.04",
-          "content": "외)중간롤 창고 및 완정 공조용 냉동기 보수 작업"
-        },
-        {
-          "no": 39,
-          "period": "2020.03",
-          "content": "제지공장 SAU 14~16, 1번 교체공사"
-        },
-        {
-          "no": 40,
-          "period": "2019.12",
-          "content": "유해화학물질 취급시설 개선 국소배기장치"
-        },
-        {
-          "no": 41,
-          "period": "2019.12",
-          "content": "시)증해공정유해가스제거공조기교체작업"
-        },
-        {
-          "no": 42,
-          "period": "2019.06",
-          "content": "외)중간롤창고및완정공조기용냉동기보수"
-        },
-        {
-          "no": 43,
-          "period": "2019.03",
-          "content": "초지공정용 Chiller 보수작업 외"
-        },
-        {
-          "no": 44,
-          "period": "2018.10",
-          "content": "중간창고 PC이설, 옥상냉동압축기 수리"
-        },
-        {
-          "no": 45,
-          "period": "2018.06",
-          "content": "조성조제 전분장 집진기 설치 냉난방기 공사"
-        },
-        {
-          "no": 46,
-          "period": "2018.06",
-          "content": "외)중간롤 창고 및 완전공정 냉동기 보수작업"
-        },
-        {
-          "no": 47,
-          "period": "2018.02",
-          "content": "외)펄프증해 2공장 건조정수 냉동기 보수작업"
-        },
-        {
-          "no": 48,
-          "period": "2018.01",
-          "content": "펄프_Mill Office 실험실 국소배기장치설치"
-        },
-        {
-          "no": 49,
-          "period": "2017.05",
-          "content": "외)#1,2 R/B 유해가스제거공조기 보수작업 외"
-        },
-        {
-          "no": 50,
-          "period": "2017.02",
-          "content": "외)펄프증해, 건조, 정수 냉동기 보수작업"
-        },
-        {
-          "no": 51,
-          "period": "2017.02",
-          "content": "외)코타공정용 #2-1호기SCREW냉동기"
-        },
-        {
-          "no": 52,
-          "period": "2016.11",
-          "content": "시)조약공정 운전실/분석실 유해가스제거공사"
-        },
-        {
-          "no": 53,
-          "period": "2016.09",
-          "content": "외)중간롤 창고 냉동기 #1호기*2대 보수작업"
-        },
-        {
-          "no": 54,
-          "period": "2016.08",
-          "content": "외)코타공정용 #2-2호기 냉동기칠러 오버홀"
-        },
-        {
-          "no": 55,
-          "period": "2016.08",
-          "content": "1표백공정운전실/분석실 Supply Air Unit"
-        },
-        {
-          "no": 56,
-          "period": "2016.04",
-          "content": "SILO_외)중간롤 창고 항온항습기 Screw냉동기보수"
-        },
-        {
-          "no": 57,
-          "period": "2016.03",
-          "content": "펄프,증해,건조,정수 전기실용 냉동기 보수작업"
-        },
-        {
-          "no": 58,
-          "period": "2015.07",
-          "content": "외)2공장 건조 전기실용 냉동기 응축기교체"
-        },
-        {
-          "no": 59,
-          "period": "2015.02",
-          "content": "품질보증1파트 실험실 환기설비보수"
-        },
-        {
-          "no": 60,
-          "period": "2015.02",
-          "content": "증해및건조,정수 전기실용냉동기보수"
-        },
-        {
-          "no": 61,
-          "period": "2014.08",
-          "content": "150R/T_중간롤 창고 항온항습기용 냉동기 Overhaul"
-        },
-        {
-          "no": 62,
-          "period": "2014.06",
-          "content": "COATER 공정용 Screw 냉동기 Overhaul..."
-        },
-        {
-          "no": 63,
-          "period": "2014.06",
-          "content": "#1 R/B 유해가스제거 공조기 보수작업"
-        },
-        {
-          "no": 64,
-          "period": "2013.03",
-          "content": "정수공정 냉동기 정비 작업외 공사"
-        },
-        {
-          "no": 65,
-          "period": "2006.06",
-          "content": "냉동기 응축기 교체공사"
-        },
-        {
-          "no": 66,
-          "period": "2006.05",
-          "content": "발전 전기실 냉동기 설치공사"
-        },
-        {
-          "no": 67,
-          "period": "2006.02",
-          "content": "냉동기 80HP 교체작업"
-        },
-        {
-          "no": 68,
-          "period": "2000.10",
-          "content": "1공장 증해운전실_환기시설 개선작업"
-        },
-        {
-          "no": 69,
-          "period": "2000.09",
-          "content": "2공장_양압설비 공사"
-        },
-        {
-          "no": 70,
-          "period": "1996.06",
-          "content": "펄프과_100R/T 1대_냉동기 COMPRESSOR Overhaul 공사"
-        },
-        {
-          "no": 71,
-          "period": "1996.06",
-          "content": "전공장_GAS FILTER UNIT MEDIA 교체 공사"
-        },
-        {
-          "no": 72,
-          "period": "1996.06",
-          "content": "펄프과_120R/T 1대_COOLING TOWER 교체 공사"
-        },
-        {
-          "no": 73,
-          "period": "1995.05",
-          "content": "1공장 R/B_양압 및 공조설비(DUCT, 배관설비 포함)"
-        },
-        {
-          "no": 74,
-          "period": "1992.05",
-          "content": "2공장 확장공사_냉동기 외_공조설비 공사 (DUCT, 배관설비 포함)"
-        }
-      ]
-    },
-    {
-      "id": "nav_08",
-      "name": "S-OIL(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "2019.07",
-          "content": "제품운영2과 4계절용 스탠드"
-        },
-        {
-          "no": 2,
-          "period": "2016.10",
-          "content": "TMS Room 방폭에어컨 외"
-        },
-        {
-          "no": 3,
-          "period": "2003.07",
-          "content": "C/T 보수 작업"
-        },
-        {
-          "no": 4,
-          "period": "1996.07",
-          "content": "30R/T_MCC ROOM 양압 공사"
-        }
-      ]
-    },
-    {
-      "id": "nav_09",
-      "name": "태광산업(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "1997.07",
-          "content": "TOP COMPRESSOR 교체"
-        },
-        {
-          "no": 2,
-          "period": "1997.05",
-          "content": "냉동기 분해 조립공사"
-        }
-      ]
-    },
-    {
-      "id": "nav_10",
-      "name": "현대미포조선(주)",
-      "records": [
-        {
-          "no": 1,
-          "period": "1999.10",
-          "content": "한우리회관 공조 DUCT CLEANING 공사"
-        },
-        {
-          "no": 2,
-          "period": "1999.08",
-          "content": "냉동기 콤프 M,G-S 교체"
-        },
-        {
-          "no": 3,
-          "period": "1999.07",
-          "content": "한우리 회관_냉동기 수리"
-        },
-        {
-          "no": 4,
-          "period": "1998.12",
-          "content": "DUCT 청소 작업"
-        },
-        {
-          "no": 5,
-          "period": "1998.06",
-          "content": "공조 설비 보수공사"
-        },
-        {
-          "no": 6,
-          "period": "1998.04",
-          "content": "한우리회관_180R/T_환기 SYSTEM 및 자동제어 PANEL 교체"
-        },
-        {
-          "no": 7,
-          "period": "1998.04",
-          "content": "180R/T_냉동기 COMPRESSOR Overhaul 공사"
-        }
-      ]
-    },
-    {
-      "id": "nav_11",
-      "name": "울산화력",
-      "records": [
-        {
-          "no": 1,
-          "period": "2002.05",
-          "content": "4.5.6호_탈황설비 항온항습기 보수"
-        },
-        {
-          "no": 2,
-          "period": "2002.04",
-          "content": "제4․5․6호기 항온항습기 보수 공사"
-        },
-        {
-          "no": 3,
-          "period": "2001.12",
-          "content": "항온항습기 납품 설치 시운전"
-        },
-        {
-          "no": 4,
-          "period": "2001.06",
-          "content": "종합사옥 1,2부처 냉동기․냉각탑 보수 공사"
-        },
-        {
-          "no": 5,
-          "period": "2001.06",
-          "content": "냉동기 냉각탑정비"
-        },
-        {
-          "no": 6,
-          "period": "2001.05",
-          "content": "제1․2호기 터보냉동기 보수 공사"
         }
       ]
     },
@@ -1633,6 +1540,99 @@
           "no": 9,
           "period": "1997.01",
           "content": "터보 냉동기 기초공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_11",
+      "name": "울산화력",
+      "records": [
+        {
+          "no": 1,
+          "period": "2002.05",
+          "content": "4.5.6호_탈황설비 항온항습기 보수"
+        },
+        {
+          "no": 2,
+          "period": "2002.04",
+          "content": "제4․5․6호기 항온항습기 보수 공사"
+        },
+        {
+          "no": 3,
+          "period": "2001.12",
+          "content": "항온항습기 납품 설치 시운전"
+        },
+        {
+          "no": 4,
+          "period": "2001.06",
+          "content": "종합사옥 1,2부처 냉동기․냉각탑 보수 공사"
+        },
+        {
+          "no": 5,
+          "period": "2001.06",
+          "content": "냉동기 냉각탑정비"
+        },
+        {
+          "no": 6,
+          "period": "2001.05",
+          "content": "제1․2호기 터보냉동기 보수 공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_10",
+      "name": "현대미포조선(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "1999.10",
+          "content": "한우리회관 공조 DUCT CLEANING 공사"
+        },
+        {
+          "no": 2,
+          "period": "1999.08",
+          "content": "냉동기 콤프 M,G-S 교체"
+        },
+        {
+          "no": 3,
+          "period": "1999.07",
+          "content": "한우리 회관_냉동기 수리"
+        },
+        {
+          "no": 4,
+          "period": "1998.12",
+          "content": "DUCT 청소 작업"
+        },
+        {
+          "no": 5,
+          "period": "1998.06",
+          "content": "공조 설비 보수공사"
+        },
+        {
+          "no": 6,
+          "period": "1998.04",
+          "content": "한우리회관_180R/T_환기 SYSTEM 및 자동제어 PANEL 교체"
+        },
+        {
+          "no": 7,
+          "period": "1998.04",
+          "content": "180R/T_냉동기 COMPRESSOR Overhaul 공사"
+        }
+      ]
+    },
+    {
+      "id": "nav_09",
+      "name": "태광산업(주)",
+      "records": [
+        {
+          "no": 1,
+          "period": "1997.07",
+          "content": "TOP COMPRESSOR 교체"
+        },
+        {
+          "no": 2,
+          "period": "1997.05",
+          "content": "냉동기 분해 조립공사"
         }
       ]
     },
