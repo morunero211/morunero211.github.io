@@ -47,6 +47,66 @@
 }
 .btn-hero:hover { background: var(--color-point1); color: #fff !important; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(42, 157, 93, 0.25); }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: 30vh;
+  }
+  
+  .hero-body {
+    padding-top: calc(var(--navbar-height) + 40px); 
+    padding-bottom: 40px;
+  }
+  
+  .hero-body p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-hero {
+    padding: 12px 28px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 25vh;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(to right, rgba(15,22,36,0.9) 0%, rgba(15,22,36,0.7) 100%);
+  }
+  
+  .hero-body {
+    padding-top: calc(var(--navbar-height) + 30px); 
+    padding-bottom: 30px;
+  }
+  
+  .hero-body h1 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 12px;
+  }
+  
+  .hero-body p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .hero-btns {
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* ===== Quick-links Navigation Section ===== */
 .quicklinks-section { background: #fafafa; padding: 80px 0; }
 .quicklinks-header { text-align: center; margin-bottom: 48px; }
@@ -86,6 +146,31 @@
 .qlink-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e2d3d; margin-bottom: 10px; }
 .qlink-card p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
 
+@media (max-width: 768px) { 
+  .quicklinks-section { padding: 60px 0; }
+  .quicklinks-header { margin-bottom: 32px; }
+  .quicklinks-header h2 { margin-bottom: 10px; }
+  .quicklinks-header p { font-size: 13px; }
+  .quicklinks-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .qlink-card { padding: 30px 20px; min-height: 200px; }
+  .qlink-icon { width: 56px; height: 56px; margin-bottom: 12px; }
+  .qlink-icon i { font-size: 1.5rem; }
+  .qlink-card h3 { font-size: 0.95rem; margin-bottom: 8px; }
+  .qlink-card p { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) { 
+  .quicklinks-section { padding: 40px 0; }
+  .quicklinks-header { margin-bottom: 20px; }
+  .quicklinks-header p { font-size: 12px; }
+  .quicklinks-grid { grid-template-columns: 1fr; gap: 12px; }
+  .qlink-card { padding: 20px 15px; min-height: 150px; }
+  .qlink-icon { width: 50px; height: 50px; margin-bottom: 10px; }
+  .qlink-icon i { font-size: 1.2rem; }
+  .qlink-card h3 { font-size: 0.9rem; margin-bottom: 6px; }
+  .qlink-card p { font-size: 0.75rem; }
+}
+
 /* ===== CTA Band ===== */
 .cta-band {
   background: linear-gradient(135deg, #2A9D5D 0%, #1B7C48 100%);
@@ -103,6 +188,48 @@
 }
 .btn-outline-light:hover { background: rgba(255,255,255,0.15); color: #fff !important; }
 
+@media (max-width: 768px) {
+  .cta-band {
+    padding: 48px 0;
+  }
+  
+  .cta-band h2 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin-bottom: 8px;
+  }
+  
+  .cta-band p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-outline-light {
+    padding: 9px 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-band {
+    padding: 32px 0;
+  }
+  
+  .cta-band h2 {
+    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    margin-bottom: 6px;
+  }
+  
+  .cta-band p {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+  
+  .btn-outline-light {
+    padding: 8px 20px;
+    font-size: 11px;
+  }
+}
+
 /* ===== Partners ===== */
 .partners-section { background: #fafafa; padding: 70px 0; }
 .section-heading { text-align: center; margin-bottom: 40px; }
@@ -118,6 +245,20 @@
   gap: 20px;
   justify-items: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .partners-section { padding: 50px 0; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2 { margin-bottom: 6px; }
+  .partners-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
+}
+
+@media (max-width: 480px) {
+  .partners-section { padding: 30px 0; }
+  .section-heading { margin-bottom: 20px; }
+  .section-heading p { font-size: 11px; }
+  .partners-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 
 @media (max-width: 768px) { .quicklinks-grid { grid-template-columns: 1fr 1fr; } }

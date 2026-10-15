@@ -165,6 +165,9 @@
 
 /* ===== 반응형 ===== */
 @media (max-width: 768px) {
+  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
+  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
+  .records-section { padding: 30px 0; }
   .records-title {
     font-size: 1.2rem;
   }
@@ -187,6 +190,25 @@
   .company-table table tbody td {
     padding: 8px;
   }
+  
+  .company-header h4 { font-size: 1rem; }
+  .records-display { gap: 30px; }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
+  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
+  .records-section { padding: 20px 0; }
+  .records-header { gap: 15px; margin-bottom: 20px; }
+  .records-title { font-size: 1rem; }
+  .filter-label { font-size: 0.85rem; }
+  .company-select { font-size: 0.8rem; padding: 8px 10px; }
+  .company-table { padding: 8px; font-size: 0.7rem; }
+  .company-table table thead th,
+  .company-table table tbody td { padding: 6px; }
+  .company-header { padding: 12px 16px; }
+  .company-header h4 { font-size: 0.9rem; }
+  .records-display { gap: 20px; }
 }
 
 /* ===== 협력업체 섹션 ===== */

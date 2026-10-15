@@ -136,6 +136,9 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
+  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
+  .contact-section { padding: 50px 0; }
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -157,4 +160,26 @@
   .contact-header p {
     font-size: 14px;
   }
+  
+  .contact-icon { width: 70px; height: 70px; margin-bottom: 16px; }
+  .contact-icon i { font-size: 2rem; }
+  .contact-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .contact-value { font-size: 1rem; margin-bottom: 6px; }
+  .contact-hours { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
+  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
+  .contact-section { padding: 30px 0; }
+  .contact-grid { gap: 15px; }
+  .contact-card { padding: 20px 15px; }
+  .contact-header { margin-bottom: 25px; }
+  .contact-header h2 { font-size: 1.1rem; margin-bottom: 10px; }
+  .contact-header p { font-size: 12px; }
+  .contact-icon { width: 60px; height: 60px; margin-bottom: 12px; }
+  .contact-icon i { font-size: 1.6rem; }
+  .contact-card h3 { font-size: 0.95rem; margin-bottom: 8px; }
+  .contact-value { font-size: 0.9rem; margin-bottom: 4px; }
+  .contact-hours { font-size: 0.8rem; }
 }

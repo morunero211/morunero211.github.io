@@ -48,4 +48,22 @@
   border-radius: 6px; overflow: hidden;
   border: 1px solid #dee2e6;
 }
-@media (max-width: 768px) { .widget-contact { margin-bottom: 30px; } }
+@media (max-width: 768px) { 
+  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
+  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
+  .blog-cols-wrapper { padding: 30px 0 40px; }
+  .widget-contact { margin-bottom: 30px; }
+  .widget-contact h4 { font-size: 1.1rem; margin-bottom: 12px; }
+  .widget-contact p { font-size: 0.9rem; margin-bottom: 18px; }
+  #daumRoughmapContainer1637583336400 { height: 280px; }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
+  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
+  .blog-cols-wrapper { padding: 20px 0 30px; }
+  .widget-contact { margin-bottom: 25px; }
+  .widget-contact h4 { font-size: 0.95rem; margin-bottom: 10px; }
+  .widget-contact p { font-size: 0.8rem; line-height: 1.8; margin-bottom: 12px; }
+  #daumRoughmapContainer1637583336400 { height: 250px; }
+}

@@ -46,7 +46,26 @@ a:hover {
   width: 100%; 
   max-width: 1140px; 
   margin: 0 auto; 
-  padding: 0 15px; 
+  padding: 0 20px; 
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
 }
 
 /* ===== Navbar (GNB) ===== */
@@ -88,6 +107,20 @@ a:hover {
   flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+}
+
 .navbar-brand .brand-logo {
   width: 40px;
   height: 40px;
@@ -98,6 +131,20 @@ a:hover {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand .brand-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand .brand-logo {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .navbar-brand .brand-logo img {
@@ -313,6 +360,36 @@ a:hover {
   margin-bottom: 0.8rem;
 }
 
+@media (max-width: 768px) {
+  .agency-footer h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .agency-footer {
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .agency-footer h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .agency-footer {
+    font-size: 0.75rem;
+    margin-top: 50px;
+    padding-top: 1rem;
+  }
+  
+  .agency-footer .go-top {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .agency-footer p { 
   margin-bottom: 0.3rem; 
   line-height: 1.6; 
@@ -393,6 +470,42 @@ a:hover {
   padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 80px;
+  }
+  
+  .page-hero-bg-text {
+    font-size: 5rem;
+  }
+  
+  .page-hero h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    min-height: 70px;
+    padding: 15px 0;
+  }
+  
+  .page-hero-bg-text {
+    font-size: 3rem;
+    top: -10px;
+    left: 5px;
+  }
+  
+  .page-hero-content {
+    padding: 0 15px;
+  }
+  
+  .page-hero h1 {
+    font-size: 1.1rem;
+    padding-top: 10px;
+  }
+}
+
 .index-video-title h3 {
   color: #333;
   font-size: 1.6rem;
@@ -424,6 +537,36 @@ table tbody td {
 
 table tbody tr:nth-child(even) { 
   background: #f8f9fa; 
+}
+
+@media (max-width: 768px) {
+  table thead th {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  
+  table tbody td {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  table thead th {
+    font-size: 0.7rem;
+    padding: 4px 4px;
+  }
+  
+  table tbody td {
+    font-size: 0.7rem;
+    padding: 3px 4px;
+  }
+  
+  table {
+    width: 100%;
+    font-size: 0.65rem;
+    overflow-x: auto;
+  }
 }
 
 .img-fluid { 

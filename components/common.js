@@ -100,6 +100,15 @@ function toggleNavbar() {
   navbarCollapse.classList.toggle('open');
 }
 
+// ===== 드롭다운 토글 (모바일) =====
+function toggleDropdown(element) {
+  var dropdownMenu = element.nextElementSibling;
+  if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+    var navItem = element.closest('.nav-item');
+    navItem.classList.toggle('open');
+  }
+}
+
 // ===== 액티브 메뉴 설정 =====
 function setActiveMenu() {
   var currentPath = window.location.pathname;

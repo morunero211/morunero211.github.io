@@ -52,3 +52,26 @@
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
+  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
+  .org-image-container,
+  .container img {
+    margin: 40px auto;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
+  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
+  .org-image-container,
+  .container img {
+    margin: 25px auto;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .org-image-placeholder { font-size: 12px; margin-top: 15px; }
+}
+

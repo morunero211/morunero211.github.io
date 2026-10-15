@@ -73,6 +73,31 @@ feature-highlight {
 .product-image img {
   flex: 1; border-radius: 4px; object-fit: contain; max-height: 250px; background: #f9f9f9; padding: 10px;
 }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 50px 0 20px !important; min-height: 120px !important; }
+  .page-hero-bg-text { font-size: 4rem; padding: 20px; }
+  .business-section { padding: 30px 0; }
+  .core_tech { font-size: 1.2rem; margin-bottom: 15px; }
+  .product-sub1-list1 { font-size: 0.9rem; line-height: 1.7; }
+  .product-image { gap: 6px; margin-bottom: 10px; }
+  .product-image img { max-height: 180px; padding: 8px; }
+  .col-md-6 { flex: 0 0 calc(50% - 20px); }
+  #project-showcase h3 { font-size: 1rem; margin: 30px 0 12px; }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 40px 0 15px !important; min-height: 90px !important; }
+  .page-hero-bg-text { font-size: 2.5rem; padding: 15px; }
+  .business-section { padding: 20px 0; }
+  .core_tech { font-size: 1rem; margin-bottom: 12px; }
+  .product-sub1-list1 { font-size: 0.8rem; line-height: 1.6; }
+  .product-item-li { font-size: 0.8rem; }
+  .product-image { flex-direction: column; gap: 4px; margin-bottom: 8px; }
+  .product-image img { max-height: 140px; padding: 6px; }
+  .col-md-6 { flex: 0 0 calc(100% - 20px); max-width: calc(100% - 20px); }
+  #project-showcase h3 { font-size: 0.9rem; margin: 20px 0 8px; }
+}
 .apply { 
   color: #e74c3c; 
   font-weight: 600;
