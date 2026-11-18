@@ -13,7 +13,7 @@ var NAV = `
 <nav class="navbar" role="navigation">
   <div class="navbar-container">
     <a class="navbar-brand" href="/">
-      <div class="brand-logo"><img src="../images/joy-log.png" alt="조이산업 로고" /></div>
+      <div class="brand-logo"><img src="../images/joy-log-color.png" alt="조이산업 로고" /></div>
       <span>조이산업</span>
     </a>
     <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Menu">
@@ -37,7 +37,14 @@ var NAV = `
           <a class="nav-link" href="/pages/project.html">사업영역</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/records.html">실적현황</a>
+          <a class="nav-link" href="javascript:void(0);" onclick="toggleDropdown(this)">
+            실적현황
+            <i class="fas fa-chevron-down caret"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/pages/records.html">기업별 실적</a>
+            <a class="dropdown-item" href="/pages/records_photo.html">현장 사진</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/board.html">고객문의</a>
@@ -78,6 +85,30 @@ var FOOTER = `
 </div>
 `;
 
+// ===== 주요 협력업체 및 거래처 =====
+// 로고 순서 = 화면 표시 순서. 추가/삭제는 이 목록만 수정
+var PARTNER_LOGOS = [
+  'relate_09.jpg', 'relate_13.jpg', 'relate_08.jpg', 'relate_22.jpg', 'relate_22_1.jpg',
+  'relate_24.jpg', 'relate_30.jpg', 'relate_15.jpg', 'relate_10.jpg', 'relate_01.jpg',
+  'relate_04.jpg', 'relate_26.jpg', 'relate_27.jpg'
+];
+
+var PARTNERS = `
+<section class="partners-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>주요 협력업체 및 거래처</h2>
+      <p>국내 주요 대기업 및 공공기관과 함께하고 있습니다.</p>
+    </div>
+    <div class="partners-image-grid">
+      ${PARTNER_LOGOS.map(function(file) {
+        return '<div class="partner-logo"><img src="../images/company_logo/' + file + '" alt="협력업체"></div>';
+      }).join('\n      ')}
+    </div>
+  </div>
+</section>
+`;
+
 // ===== 메인 주입 함수 =====
 function inject() {
   // 1. Navbar 삽입 (body 맨 앞)
@@ -90,7 +121,13 @@ function inject() {
   footerWrapper.innerHTML = FOOTER;
   document.body.appendChild(footerWrapper.children[0]);
 
-  // 3. 메뉴 액티브 상태 설정
+  // 3. 협력업체 섹션 삽입 (<div id="partners"></div>가 있는 페이지만)
+  var partnersSlot = document.getElementById('partners');
+  if (partnersSlot) {
+    partnersSlot.outerHTML = PARTNERS;
+  }
+
+  // 4. 메뉴 액티브 상태 설정
   setActiveMenu();
 }
 

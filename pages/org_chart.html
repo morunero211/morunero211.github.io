@@ -18,9 +18,100 @@
     <div class="page-hero-content"><h1>조직도</h1></div>
   </div>
 
-  <div class="container">
-          <img src="../images/org_chart.png" alt="조직도">
+  <!-- 조직도: 이미지(images/org_chart.png) 대신 HTML로 구성. 수정은 아래 텍스트만 고치면 됨 -->
+  <div class="container org-chart">
+    <p class="org-scroll-hint"><i class="fas fa-arrows-alt-h"></i> 좌우로 밀어서 보기</p>
+    <div class="org-scroll">
+      <div class="org">
+        <div class="org-node org-ceo">대표이사</div>
+        <div class="org-children">
+
+          <!-- 운영사업부 -->
+          <div class="org-child">
+            <div class="org-node org-hq">운영사업부</div>
+            <div class="org-children">
+              <div class="org-child">
+                <div class="org-node org-team">관리팀</div>
+                <ul class="org-items">
+              <li>총무</li>
+              <li>경리회계</li>
+              <li>업무팀</li>
+                </ul>
+              </div>
+              <div class="org-child">
+                <div class="org-node org-team">영업팀</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 기술사업부 -->
+          <div class="org-child">
+            <div class="org-node org-hq">기술사업부</div>
+            <div class="org-children">
+              <div class="org-child">
+                <div class="org-node org-team">설비사업부</div>
+                <div class="org-children">
+                  <div class="org-child">
+                    <div class="org-node org-sub">제작</div>
+                    <ul class="org-items">
+                      <li>스크류 냉동기</li>
+                      <li>터보 냉동기</li>
+                      <li>흡수식 냉동기</li>
+                      <li>왕복동식 냉동기</li>
+                      <li>공조기</li>
+                      <li>항온항습기</li>
+                      <li>냉난방기</li>
+                      <li>냉각탑</li>
+                    </ul>
+                  </div>
+                  <div class="org-child">
+                    <div class="org-node org-sub">유지·보수</div>
+                    <ul class="org-items">
+                      <li>양압설비</li>
+                      <li>항온항습 설비</li>
+                      <li>제습 설비</li>
+                      <li>환기 설비</li>
+                      <li>집진 설비</li>
+                      <li>덕트 설비</li>
+                      <li>전외기 Type 공조설비</li>
+                      <li>냉난방 설비</li>
+                      <li>공조설비 관련 자동 제어 시스템</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="org-child">
+                <div class="org-node org-team">생산산업부</div>
+                <ul class="org-items">
+              <li>공기조화기</li>
+              <li>공기순환기</li>
+              <li>스크류냉동기</li>
+                </ul>
+              </div>
+              <div class="org-child">
+                <div class="org-node org-team">패키지 사업부</div>
+                <ul class="org-items">
+              <li>냉난방기</li>
+              <li>항온항습기</li>
+              <li>매립형 덕트</li>
+              <li>환기 시스템</li>
+              <li>팬코일 유니트</li>
+              <li>시스템 에어컨</li>
+                </ul>
+              </div>
+              <div class="org-child">
+                <div class="org-node org-team">R&amp;D 사업부</div>
+                <ul class="org-items">
+              <li>기업부설연구소</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
+  </div>
 
 
 

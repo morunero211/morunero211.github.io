@@ -3,62 +3,182 @@
  * 🏢 org_chart.css - 조직도 페이지 스타일
  * ========================================================
  * 역할:
- *   - 순수 CSS 조직도 트리 (Google Visualization 대체)
- *   - 계층 구조 시각화: CEO → 부서 → 팀 구조
- *   - 의사요소(::before/::after) 연결선 그리기
- *   - 컬러 코딩: 역할별 노드 색상 구분
+ *   - HTML 조직도 트리 (기존 이미지 images/org_chart.png 대체)
+ *   - 연결선: .org-children(세로 줄기) + .org-child(가로선·세로 낙하선) 의사요소
  * 내용:
- *   - .org-tree / .org-tree ul: 테이블 레이아웃 (정렬용)
- *   - .org-tree li: 셀 배치 + 보더 라인
  *   - .org-node 4가지 타입:
- *       * root-node: 어두운 배경 (대표이사)
- *       * dept-node: 파란색 배경 (부서)
- *       * team-node: 밝은 파란색 배경 (팀)
- *       * sub-node: 흰색 배경 (직원)
- *   - 의사요소: ::before/::after로 연결 라인 생성
- *   - 반응형: overflow-x: auto (모바일 수평 스크롤)
+ *       * org-ceo: 진한 초록 (대표이사)
+ *       * org-hq: 초록 (운영/기술사업부)
+ *       * org-team: 흰 바탕 + 초록 테두리 (팀/사업부)
+ *       * org-sub: 연한 초록 (소분류)
+ *   - .org-items: 하위 항목 회색 알약 목록
+ *   - 반응형: 1100px 미만에서 가로 스크롤
  * 사용 대상: pages/org_chart.html
  * ======================================================== */
 
-
-
-
-
-/* ===== 조직도 이미지 영역 ===== */
-.org-image-container,
-.container img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 60px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  /* 좌측 이동 가능: margin-left를 조정하면 왼쪽으로 이동 */
-  /* 기본값 auto는 완벽한 중앙정렬, 필요시 px 값으로 변경 */
+.org-chart {
+  padding-top: 60px;
+  padding-bottom: 80px;
 }
 
-.org-image-placeholder {
-  color: #999;
+.org-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+.org {
+  --org-line: #9aa5a0;
+  --org-gap: 22px;
+  width: max-content;  /* 넘치면 왼쪽부터 스크롤되도록 */
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== 노드 ===== */
+.org-node {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 124px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.org-ceo {
+  min-width: 220px;
+  height: 54px;
+  background: var(--color-cyan);
+  color: #fff;
+  font-size: 19px;
+  box-shadow: 0 4px 12px rgba(27, 124, 72, 0.25);
+}
+
+.org-hq {
+  min-width: 170px;
+  height: 44px;
+  background: var(--color-point1);
+  color: #fff;
+  font-size: 16px;
+}
+
+.org-team {
+  background: #fff;
+  color: #333;
+  border: 1.5px solid var(--color-point1);
+}
+
+/* 사업부 아래 소분류 (예: 설비사업부 > 제작 / 유지·보수) */
+.org-sub {
+  min-width: 110px;
+  height: 36px;
+  background: #e8f5ee;
+  color: var(--color-cyan);
   font-size: 14px;
-  margin-top: 20px;
+}
+
+/* ===== 연결선 ===== */
+.org-children {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--org-gap);
+}
+
+/* 부모 노드에서 내려오는 줄기 */
+.org-children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: var(--org-gap);
+  border-left: 1px solid var(--org-line);
+}
+
+.org-child {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--org-gap) 5px 0;
+}
+
+/* 형제를 잇는 가로선 */
+.org-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--org-line);
+}
+
+.org-child:first-child::before { left: 50%; }
+.org-child:last-child::before { right: 50%; }
+.org-child:only-child::before { display: none; }
+
+/* 가로선에서 노드로 내려가는 선 */
+.org-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: var(--org-gap);
+  border-left: 1px solid var(--org-line);
+}
+
+/* 운영사업부 / 기술사업부 사이 간격 */
+.org > .org-children > .org-child { padding-left: 10px; padding-right: 10px; }
+
+/* ===== 하위 항목 ===== */
+.org-items {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.org-items li {
+  min-width: 124px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #e4e6e8;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+
+/* ===== 안내 문구 (좁은 화면에서만) ===== */
+.org-scroll-hint {
+  display: none;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+@media (max-width: 1100px) {
+  .org-scroll-hint { display: block; }
 }
 
 @media (max-width: 768px) {
-  .org-image-container,
-  .container img {
-    margin: 40px auto;
-    border-radius: 6px;
-    overflow-x: auto;
-  }
+  .org-chart { padding-top: 40px; padding-bottom: 50px; }
 }
 
 @media (max-width: 480px) {
-  .org-image-container,
-  .container img {
-    margin: 25px auto;
-    overflow-x: auto;
-    width: 100%;
-  }
-  .org-image-placeholder { font-size: 12px; margin-top: 15px; }
+  .org-chart { padding-top: 25px; padding-bottom: 35px; }
 }
-
